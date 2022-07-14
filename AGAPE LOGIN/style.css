@@ -19,7 +19,8 @@ section {
 section .imgBox{
     position: relative;
     width: 60%;
-    height: 100%;       
+    height: 100%;
+    margin-left: 10%;    /**/   
 }
 
 section .imgBox img{
@@ -41,6 +42,8 @@ section .contentBox{
 
 section .contentBox .formBox{
     width: 50%;
+/*     margin: 0% 5% 0% 5%;
+ */
 }
 
 section .contentBox .formBox h2{
@@ -58,10 +61,10 @@ section .contentBox .formBox .inputBx{
 }
 
 section .contentBox .formBox span{
-    font-size:16px;
-    margin-bottom:5px;
-    display:inline-block;
-    color:black;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
@@ -92,12 +95,15 @@ section .contentBox .formBox input:hover{
     font-weight: 500;
     font-size: 20px;
     border: none;
+    padding: 9px 20px 10px 12px;
+
 }
 
 #btnLogIn:hover{
     background-color: #21a66adc;
     overflow: hidden;
 }
+
 #signUp{
     width: 100%;
     font-weight: 400;
@@ -112,13 +118,12 @@ section .contentBox .formBox input:hover{
 
 @media(max-width:768px){
     section .imgBox{
-        resize: vertical;
-/*         margin-top: 2%;
- */        position: absolute;
+/*        margin-top: 2%;*/     
+        position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 125%;
+        width: 100%; 
+        height: 100%;
         overflow: hidden;
         
     }
@@ -126,7 +131,7 @@ section .contentBox .formBox input:hover{
     section .contentBox{
         display:flex;
 /*         margin: 15%;
- */        justify-content:center;
+ */     justify-content:center;
         align-items:center;
         width:100%;
         height:100%;
