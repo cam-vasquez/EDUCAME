@@ -113,8 +113,8 @@ section .contentBox .formBox input:hover{
 @media(max-width:768px){
     section .imgBox{
         resize: vertical;
-        margin-top: 2%;
-        position: absolute;
+/*         margin-top: 2%;
+ */        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -125,8 +125,8 @@ section .contentBox .formBox input:hover{
 
     section .contentBox{
         display:flex;
-        margin: 15%;
-        justify-content:center;
+/*         margin: 15%;
+ */        justify-content:center;
         align-items:center;
         width:100%;
         height:100%;
@@ -138,7 +138,7 @@ section .contentBox .formBox input:hover{
         padding:40px;
         background:rgba(255, 255, 255, 0.9);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;        
-        margin:50px;
+      /*   margin:20px; */
         /* background-color: #ffff; */
 
     }
