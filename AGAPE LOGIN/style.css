@@ -141,8 +141,10 @@ section .contentBox .formBox input:hover{
     section .contentBox .formBox{
         width:100%;
         padding:40px;
-        background:rgba(255, 255, 255, 0.9);
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;        
+        background: white;
+        /* background:rgba(255, 255, 255, 0.9); */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 5%;        
       /*   margin:20px; */
         /* background-color: #ffff; */
 
