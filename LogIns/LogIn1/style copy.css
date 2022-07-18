@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 section {
@@ -14,9 +15,18 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
+    
 }
 
-section .imgBox{
+/* body{
+    background: linear-gradient(135deg, #92abfe 50%, #94b7fd 50%);
+  background: #005AA7;  
+    background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  
+    background: linear-gradient(to bottom, #FFFDE4, #005AA7); }
+/*     
+ */
+ 
+/* section .imgBox{
     position: relative;
     width: 100%;
     height: 100%;
@@ -29,7 +39,7 @@ section .imgBox img{
     width: 100%;
     height: fit-content;
     object-fit: cover;
-}
+} */
 
 section .contentBox{
     display: flex;
@@ -37,10 +47,15 @@ section .contentBox{
     align-items: center;
     width: 100%;
     height: 100%;
+    background: #94b7fd;  
+    background: -webkit-linear-gradient(to bottom, #92abfe, #c1d6ff);  
+    background: linear-gradient(to bottom, #92abfe, #c1d6ff); 
+
 }
 
 section .contentBox .formBox{
-    width: 50%;
+    max-width: 440px;
+    min-height: 338px;
     padding:40px;
     background: white;
     /* background:rgba(255, 255, 255, 0.9); */
@@ -64,7 +79,7 @@ section .contentBox .formBox .inputBx{
     margin-bottom: 20px;
 }
 
-section .contentBox .formBox span{
+section .contentBox .formBox label{
     font-size: 16px;
     margin-bottom: 5px;
     display: inline-block;
@@ -139,31 +154,20 @@ a#btnLogIn {
 }
  */
 @media(max-width:768px){
-    section .imgBox{
-/*        margin-top: 2%;*/     
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: 100%;
-        overflow: hidden;
-        
-    }
 
     section .contentBox{
         display:flex;
-/*       margin: 15%;
- */     justify-content:center;
+       justify-content:center;
         align-items:center;
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         z-index:1;
         overflow: hidden;
-        margin: 2%;
+        background-color: #c1d6ff;      
     }
 
     section .contentBox .formBox{
-        width:100%;
+        width: 100%;
         padding:40px;
         background: white;
         /* background:rgba(255, 255, 255, 0.9); */
