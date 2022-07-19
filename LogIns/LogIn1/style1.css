@@ -140,8 +140,10 @@ form i {
         width: 100%;
         padding:40px;
         background: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        margin: 5%;        
+        /* Se puede cambiar el shadow box*/
+        box-shadow: rgba(255, 255, 255, 0) 0px 3px 8px;
+/*         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ */        margin: 5%;        
     }
 
 }
