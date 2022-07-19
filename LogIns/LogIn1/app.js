@@ -15,5 +15,15 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
+/* END TOGGLE */
 
-
+function enviar(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    if(username != "" && password != ""){
+        window.open('http://www.google.com', '_self');
+    }
+    else{
+        console.log("Datos necesarios");
+    }
+} 
