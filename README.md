@@ -16,3 +16,7 @@ ____
 ### Validation form
 
 Should add validation with Js since the submit button disable the inherited form validatopns :'>
+
+-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
+-- 
