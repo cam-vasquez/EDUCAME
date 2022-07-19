@@ -17,37 +17,78 @@
 <div class="contentBox">
     <div class="formBox">
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
-        <h2>Sign Up</h2><br>
+        <h2>Generar registro</h2><br>
 <form action="#" method="post" target="_blank">
-   
     <div class="inputBox">
-        <div class="fechaSlct">
-            <div class="col-md-24 left">
-                <label>Por persona</label>
-            </div>
-            <div class="container">
+        <div class="col-md-24 left">
+            <label>Por fecha</label>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="col">
-                    <select aria-describedby=PersonError"  aria-label="Persona" id="persona" name="Persona">
-                        <option value='action'>Selecionar persona<i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                        <option value="1"> Miguel Alejandro Navarro</option>
-                        <option value="2"> Daniela Michelle Torres</option>
-                        <option value="3"> Martín Elías Acosta</option>
-                        <option value="4"> Valeria Alexandra Escobar</option>
-                        <option value="5"> Adriana Carolina Martinez</option>
-                        <option value="6"> Carlos Gustavo Sánchez</option>
-                        <option value="7"> Adyni Arleht Pocasangre</option>
-                        <option value="8"> Carlos Fernando Vásquez</option>
-                        <option value="9"> Iris Yanet Aguilar</option>
-                        <option value="10"> Carlos Eduardo Grande</option>
-                        <option value="11"> Rebeca Jimana Alcaine</option>
-                        <option value="12"> José Luis Menjívar</option>
-                    </select>   
-                </div>    
+            <div class="col"> <!-- col-6 -->
+                <select aria-describedby="MonthError"  aria-label="Mes" class="fecha"  name="Mes">
+                    <option value='fecha'> Mes <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrebro</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select> 
+                           
+            </div>
+            <div class="col">
+                <select aria-describedby="YearError"  aria-label="Year" id="year" name="Year">
+                    <option value='fecha'>Año <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
+                    <option value="1">2022</option>
+                    <option value="2">2023</option>
+                    <option value="3">2024</option>
+                    <option value="4">2025</option>
+                    <option value="5">2026</option>
+                    <option value="6">2027</option>
+                    <option value="7">2028</option>
+                    <option value="8">2029</option>
+                    <option value="9">2030</option>
+                    <option value="10">2031</option>
+                </select>            
             </div>
             </div>
         </div>
-        
+    </div>
+
+<br>
+
+    <div class="inputBox">
+        <div class="col-md-24 left">
+            <label>Por persona</label>
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="col">
+                <select aria-describedby=PersonError"  aria-label="Persona" id="persona" name="Persona">
+                    <option value='action'>Selecionar persona<i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
+                    <option value="1"> Miguel Alejandro Navarro</option>
+                    <option value="2"> Daniela Michelle Torres</option>
+                    <option value="3"> Martín Elías Acosta</option>
+                    <option value="4"> Valeria Alexandra Escobar</option>
+                    <option value="5"> Adriana Carolina Martinez</option>
+                    <option value="6"> Carlos Gustavo Sánchez</option>
+                    <option value="7"> Adyni Arleht Pocasangre</option>
+                    <option value="8"> Carlos Fernando Vásquez</option>
+                    <option value="9"> Iris Yanet Aguilar</option>
+                    <option value="10"> Carlos Eduardo Grande</option>
+                    <option value="11"> Rebeca Jimana Alcaine</option>
+                    <option value="12"> José Luis Menjívar</option>
+                </select>   
+            </div>    
+        </div>
+        </div>
     </div>
 <br>
     <div class="inputBox">
@@ -74,50 +115,6 @@
         </div>
     </div>
 
-<br>
-
-<div class="inputBox">
-    <div class="col-md-24 left">
-        <label>Por fecha</label>
-    </div>
-    <div class="container">
-        <div class="row">
-        <div class="col"> <!-- col-6 -->
-            <select aria-describedby="MonthError"  aria-label="Mes" class="fecha"  name="Mes">
-                <option value='fecha'> Mes <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                <option value="1">Enero</option>
-                <option value="2">Febrebro</option>
-                <option value="3">Marzo</option>
-                <option value="4">Abril</option>
-                <option value="5">Mayo</option>
-                <option value="6">Junio</option>
-                <option value="7">Julio</option>
-                <option value="8">Agosto</option>
-                <option value="9">Septiembre</option>
-                <option value="10">Octubre</option>
-                <option value="11">Noviembre</option>
-                <option value="12">Diciembre</option>
-            </select> 
-                       
-        </div>
-        <div class="col">
-            <select aria-describedby="YearError"  aria-label="Year" id="year" name="Year">
-                <option value='fecha'>Año <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                <option value="1">2022</option>
-                <option value="2">2023</option>
-                <option value="3">2024</option>
-                <option value="4">2025</option>
-                <option value="5">2026</option>
-                <option value="6">2027</option>
-                <option value="7">2028</option>
-                <option value="8">2029</option>
-                <option value="9">2030</option>
-                <option value="10">2031</option>
-            </select>            
-        </div>
-        </div>
-    </div>
-</div>
 <br>
 
     <div class="container">

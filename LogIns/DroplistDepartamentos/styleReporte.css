@@ -38,7 +38,7 @@ select {
 }
 
 #year{
-    margin-left: 15px;
+    margin-left: 10px;
     width: 92%;
 }
 
@@ -144,7 +144,6 @@ input:focus::placeholder {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    margin-left: 3%;
     border: 2px solid #5047E6;
 }
 
@@ -170,9 +169,9 @@ input:focus::placeholder {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    border: 1px sod #120e0e;
-    border: 1px sod #120e0e;
     border: 2px solid #120e0e;
+    width: 95%;
+
 }
 
 #btnLimpiar:hover{
