@@ -45,7 +45,7 @@ section .contentBox .formBox h2{
     font-weight: 600;
     font-size: 1.5em;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     display: inne-block;
     letter-spacing: 1px;
     text-align: center;
