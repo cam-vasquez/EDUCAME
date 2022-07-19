@@ -19,4 +19,4 @@ Should add validation with Js since the submit button disable the inherited form
 
 -- https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
--- 
+-- https://stackoverflow.com/questions/68856549/required-attribute-is-not-working-html ( exactly my problem)
