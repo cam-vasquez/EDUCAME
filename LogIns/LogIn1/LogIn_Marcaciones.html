@@ -18,15 +18,15 @@
 <section>
 
     <div class="contentBox">
-    <div class="formBox">
+    <div class="formBox" aria-live="polite" onsubmit="signup();return false;" > <!--  onsubmit="signup()"  -->
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo">
             <br>
             <h2>Control y registro de marcaciones</h2>
             <br>
-        <form action="#" method="post" target="_blank">
+        <form action="#" method="post"  >
             <div class="inputBox">
                 <label for="usuario">Usuario</label>
-                <input type="text" id="username" placeholder="usario.mined123" required autocomplete="username" name="username" >
+                <input type="text" id="username" placeholder="usuario.mined123" required autocomplete="username" name="username" >
             </div>
                     <br>
             <div class="inputBox">
@@ -36,7 +36,7 @@
             </div>
                     <br>
             <div class="inputBox">
-                <button type="subtmit" onClick="javascript:window.open('http://www.google.com', '_self');" id="submit"  formtarget="_blank" class="submit" >Iniciar sesión</button>
+                <button type="subtmit" onClick="javascript:window.open('http://www.google.com', '_self');" id="submit"  class="submit" >Iniciar sesión</button>
             </div>
     
         </form>
@@ -45,22 +45,21 @@
 
 </section>
 
-<!-- Js code -->
+<!-- Javascript (Can be move to a external .js) -->
 
 <script>
     const togglePassword = document.querySelector("#togglePassword");
     const password = document.querySelector("#password");
 
     togglePassword.addEventListener("click", function () {
-        // toggle the type attribute
+
         const type = password.getAttribute("type") === "password" ? "text" : "password";
         password.setAttribute("type", type);
-        
-        // toggle the icon
+        // toggle para icon
         this.classList.toggle("bi-eye");
     });
 
-    // prevent form submit
+    // previene enviar el form
     const form = document.querySelector("form");
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -68,7 +67,9 @@
 
 </script>
 
-<script src="js/app.js"></script>
+<script src="/LogIn1/app.js"></script>
+
+
 
 <!-- Js de Bootstrap -->
 
@@ -77,3 +78,4 @@
 
 </body>
 </html>
+

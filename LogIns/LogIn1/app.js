@@ -1,22 +1,25 @@
-<<<<<<< HEAD
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#password");
 
-togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye / eye slash icon
-    this.classList.toggle('bi-eye');
-=======
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+togglePassword.addEventListener("click", function () {
 
-togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye / eye slash icon
-    this.classList.toggle('bi-eye');
->>>>>>> 065d2512d34db5b863c8a7d2592fa03527c2f568
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    // toggle para icon
+    this.classList.toggle("bi-eye");
 });
+
+// previene enviar el form
+const form = document.querySelector("form");
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+});
+
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+ }
+)
