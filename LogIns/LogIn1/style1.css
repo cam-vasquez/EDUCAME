@@ -44,7 +44,7 @@ section .contentBox .formBox h2{
     color: #5047E6;
     font-weight: 600;
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 0px;
     display: inne-block;
     letter-spacing: 1px;
@@ -123,7 +123,7 @@ form i {
     
 }
 
-@media(max-width:768px){
+@media(max-width:500px){
 
     section .contentBox{
         display:flex;

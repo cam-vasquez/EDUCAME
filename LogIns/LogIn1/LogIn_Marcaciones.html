@@ -47,27 +47,8 @@
 
 <!-- Javascript (Can be move to a external .js) -->
 
-<script>
-    const togglePassword = document.querySelector("#togglePassword");
-    const password = document.querySelector("#password");
 
-    togglePassword.addEventListener("click", function () {
-
-        const type = password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
-        // toggle para icon
-        this.classList.toggle("bi-eye");
-    });
-
-    // previene enviar el form
-    const form = document.querySelector("form");
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-    });
-
-</script>
-
-<script src="js/app.js"></script>
+<script src="/LogIn1/app.js"></script>
 
 
 
