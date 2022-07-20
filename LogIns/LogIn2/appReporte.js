@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     $('select').change(function () {
         if ($(this).val() == 'action') {
             $("#btnLogIn").prop('disabled', true);
@@ -8,4 +8,4 @@ $(document).ready(function () {
             $("select").not(this).prop('disabled', true);
         }
     });
-});
+}); */

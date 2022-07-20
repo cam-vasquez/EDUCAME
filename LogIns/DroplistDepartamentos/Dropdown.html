@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/RESOURCES/TabLogo.png">
-    <link rel="stylesheet" href="styleReporte.css">
+    <link rel="icon" href="/RESOURCES/TabLogo1.png">
+    <link rel="stylesheet" href="/DroplistDepartamentos/styleDropDown.css">
+    <script src="depart-muncipio.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e903878fec.js" crossorigin="anonymous"></script>
-    <title>Registros</title>
+    <title>Departamentos</title>
 </head>
 <body>
 
@@ -17,122 +18,59 @@
 <div class="contentBox">
     <div class="formBox">
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
-        <h2>Generar registro</h2><br>
+        <h2>Seleccionar departamento</h2><br>
+
 <form action="#" method="post" target="_blank">
-    <div class="inputBox">
-        <div class="col-md-24 left">
-            <label>Por fecha</label>
-        </div>
-        <div class="container">
-            <div class="row">
-            <div class="col"> <!-- col-6 -->
-                <select aria-describedby="MonthError"  aria-label="Mes" class="fecha"  name="Mes">
-                    <option value='fecha'> Mes <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                    <option value="1">Enero</option>
-                    <option value="2">Febrebro</option>
-                    <option value="3">Marzo</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Mayo</option>
-                    <option value="6">Junio</option>
-                    <option value="7">Julio</option>
-                    <option value="8">Agosto</option>
-                    <option value="9">Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
-                </select> 
-                           
-            </div>
-            <div class="col">
-                <select aria-describedby="YearError"  aria-label="Year" id="year" name="Year">
-                    <option value='fecha'>Año <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                    <option value="1">2022</option>
-                    <option value="2">2023</option>
-                    <option value="3">2024</option>
-                    <option value="4">2025</option>
-                    <option value="5">2026</option>
-                    <option value="6">2027</option>
-                    <option value="7">2028</option>
-                    <option value="8">2029</option>
-                    <option value="9">2030</option>
-                    <option value="10">2031</option>
-                </select>            
-            </div>
-            </div>
-        </div>
-    </div>
-
-<br>
 
     <div class="inputBox">
         <div class="col-md-24 left">
-            <label>Por persona</label>
+            <label>Departamento</label>
         </div>
         <div class="container">
         <div class="row">
             <div class="col">
-                <select aria-describedby=PersonError"  aria-label="Persona" id="persona" name="Persona">
-                    <option value='action'>Selecionar persona<i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                    <option value="1"> Miguel Alejandro Navarro</option>
-                    <option value="2"> Daniela Michelle Torres</option>
-                    <option value="3"> Martín Elías Acosta</option>
-                    <option value="4"> Valeria Alexandra Escobar</option>
-                    <option value="5"> Adriana Carolina Martinez</option>
-                    <option value="6"> Carlos Gustavo Sánchez</option>
-                    <option value="7"> Adyni Arleht Pocasangre</option>
-                    <option value="8"> Carlos Fernando Vásquez</option>
-                    <option value="9"> Iris Yanet Aguilar</option>
-                    <option value="10"> Carlos Eduardo Grande</option>
-                    <option value="11"> Rebeca Jimana Alcaine</option>
-                    <option value="12"> José Luis Menjívar</option>
+                <select aria-label="Departamento" id="departamento" name="departamento">
+                    <option value='action'>Selecionar departmento<i class="fa-angle-down"></i> </option>
                 </select>   
             </div>    
         </div>
         </div>
     </div>
-<br>
-    <div class="inputBox">
-        <div class="col-md-24 left">
-                <label>Por socio</label>
-        </div>
-        <div class="container">
-            <div class="row">
-            <div class="col">
-                <select aria-describedby="PartnerError"  aria-label="Partner" id="partner" name="Partner">
-                    <option value='action'>Seleccionar socio <i class="fa-angle-down"><!-- &#xf107; --></i>  </option>
-                    <option value="1">Microsoft El Salvador</option>
-                    <option value="2">MINSAL</option>
-                    <option value="3">USAID</option>
-                    <option value="4">Fundación Umbrella</option>
-                    <option value="5">EDUCO</option>
-                    <option value="6">FEDISAL</option>
-                    <option value="7">FEPADE</option>
-                    <option value="8">Fundación CINDE</option>
-                    <!-- options can be added to the dropdown list-->
-                </select>                         
-            </div> 
-        </div>
-        </div>
+
+    <br>
+
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Municipio</label>
     </div>
-
-<br>
-
     <div class="container">
-        <div class="row"> 
-            <div class="col">
-                <div class="inputBox">
-                    <input type="reset" value="Limpiar" id="btnLimpiar" > 
-                </div>
-            </div>
+    <div class="row">
         <div class="col">
-            <div class="inputBox">
-                <input type="button" onClick="javascript:window.open('http://www.google.com', '_self');" value="Aceptar" id="btnLogIn"  >
-            </div>
-        </div>
-                    
+            <div>
+                <span id="municipio-code"><input type="text" id="municipio"></span>
+                </div>  
+        </div>    
+    </div>
+    </div>
+</div>
+
+<br>
+<!--  -->
+
+<div class="container">
+<div class="row"> 
+    <div class="col">
+        <div class="inputBox">
+            <input type="reset" value="Limpiar" id="btnLimpiar" > 
         </div>
     </div>
-                        
+    <div class="col">
+        <div class="inputBox">
+            <input type="button" onClick="javascript:window.open('http://www.google.com', '_self');" value="Aceptar" id="btnLogIn"  >
+        </div>
+    </div>            
+</div>
+</div>                       
                     
 </form>         
 </div>     
@@ -140,15 +78,65 @@
 </section>
 
 
-<!-- Js Validation Form -->   
+<!-- Js   -->   
 
-<!-- Js para Icon Password-->   
+<script>
+    // user departamento code for selected option
+    let user_departamento_code = "IN";
+    
+    (function () {
+    
+        // Get the departamento name and municipio name from the imported script.
+        let departamento_list = departamento_and_municipios['departamento'];
+        let municipios_list = departamento_and_municipios['municipios'];
+    
+        // creating departamento name drop-down
+        let option =  '';
+        option += '<option>Seleccionar departamento</option>';
+        for(let departamento_code in departamento_list){
+            // set selected option user departamento
+            let selected = (departamento_code == user_departamento_code) ? ' selected' : '';
+            option += '<option value="'+departamento_code+'"'+selected+'>'+departamento_list[departamento_code]+'</option>';
+        }
+        document.getElementById('departamento').innerHTML = option;
+    
+        // creating municipios name drop-down
+        let text_box = '<input type="text" class="input-text" id="municipio">';
+        let municipio_code_id = document.getElementById("municipio-code");
+    
+        function create_municipios_dropdown() {
+            // get selected departamento code
+            let departamento_code = document.getElementById("departamento").value;
+            let municipios = municipios_list[departamento_code];
+            // invalid departamento code or no municipios add textbox
+            if(!municipios){
+                municipio_code_id.innerHTML = text_box;
+                return;
+            }
+            let option = '';
+            if (municipios.length > 0) {
+                option = '<select id="municipio">\n';
+                for (let i = 0; i < municipios.length; i++) {
+                    option += '<option value="'+municipios[i].code+'">'+municipios[i].name+'</option>';
+                }
+                option += '</select>';
+            } else {
+                // create input textbox if no municipios 
+                option = text_box
+            }
+            municipio_code_id.innerHTML = option;
+        }
+    
+        // departamento select change event
+        const departamento_select = document.getElementById("departamento");
+        departamento_select.addEventListener('change', create_municipios_dropdown);
+    
+        create_municipios_dropdown();
+    })();
+    
+</script>
 
-
-<!-- Prueba que no sirve <script src="/LogIn2/appReporte.js"></script>
- -->
-
- <script src="/LogIn2/appReporte.js"></script>
+<script src="depart-muncipio.js"></script>
 
     <!-- Js libraries and so -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
