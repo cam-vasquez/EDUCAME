@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links de css externo, librerias, etc. -->
+    <title>Login: Agape</title>
     <link rel="icon" href="/RESOURCES/TabLogo1.png">
     <link rel="stylesheet" href="/LogIn1/style1.css">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- LOCAL BOOTSTRAP  -->
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <script src="https://kit.fontawesome.com/e903878fec.js" crossorigin="anonymous"></script>
     
-    <title>Login: Agape</title>
 </head>
 <body>
 
 <section>
 
     <div class="contentBox">
-    <div class="formBox" aria-live="polite" onsubmit="signup();return false;" > <!--  onsubmit="signup()"  -->
+    <div class="formBox" aria-live="polite" > <!--  onsubmit="signup();return false;" onsubmit="signup()"  -->
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo">
             <br>
             <h2>Control y registro de marcaciones</h2>
@@ -34,10 +37,11 @@
                 <label for="password">Contraseña</label>
                 <input type="password" placeholder="••••••••••••" id="password" name = "password" autocomplete = "current-password" aria-required="true" required  > 
                 <i class="bi bi-eye-slash" id="togglePassword"></i>
+                
             </div>
                     <br>
             <div class="inputBox">
-                <button type="subtmit" onclick="enviar()" id="submit"  class="submit" >Iniciar sesión</button>
+                <button type="subtmit" onclick="enviar()" id="submit" class="submit" >Iniciar sesión</button>
                 <!-- onClick="javascript:window.open('http://www.google.com', '_self');" -->
             </div>
     
