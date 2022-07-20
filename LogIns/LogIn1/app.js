@@ -1,3 +1,5 @@
+/* START TOGGLE  */
+
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#password");
 
@@ -21,9 +23,9 @@ function enviar(){
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     if(username != "" && password != ""){
-        window.open('http://www.google.com', '_self');
+       console.log("Datos necesarios"); 
     }
     else{
-        console.log("Datos necesarios");
+        window.open('http://www.google.com', '_self');
     }
 } 

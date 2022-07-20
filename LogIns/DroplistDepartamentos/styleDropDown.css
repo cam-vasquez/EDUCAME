@@ -27,7 +27,7 @@
 
 select {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 10px 20px 10px 12px;
     outline: none;
     font-weight: 400;
@@ -35,6 +35,11 @@ select {
     letter-spacing: 1px;
     background: transparent;
     border-radius: 5px;
+}
+
+select:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
 }
 
 #year{
@@ -164,6 +169,8 @@ input:focus::placeholder {
     justify-items: center;
     justify-content: center;
     border: 2px solid #5047E6;
+    width: -webkit-fill-available;
+
 }
 
 #btnLogIn:hover{
@@ -189,7 +196,8 @@ input:focus::placeholder {
     justify-items: center;
     justify-content: center;
     border: 2px solid #120e0e;
-    width: 95%;
+    width: -webkit-fill-available;
+    margin-right: 10px;
    /*  transition-delay: 0s;
     transition-duration: 0s;
     -webkit-transition-duration: calc(0.01s); */
