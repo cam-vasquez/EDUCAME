@@ -142,7 +142,7 @@
         <br>
             
         <div class="inputBox">
-                    <input type="button" onCck="javascript:window.open('http://www.google.com', '_self');" value="Iniciar sesion" id="btnLogIn"  >
+                    <input type="button" onCck="javascript:window.open('http://www.google.com', '_self');" value="Iniciar sesion" id="btnEnviar"  >
                     </div>
                  
                     </div>
