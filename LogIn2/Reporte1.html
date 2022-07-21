@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 
-    <!-- LOCAL FONTAWESOME -->
-    <link rel="stylesheet" href="/RESOURCES/fontawesome-free-6.1.1-web/css/all.css">
-
+    <!-- LOCAL FONT -->
+    <link rel="stylesheet" href="/RESOURCES/font.css">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     
@@ -30,51 +30,20 @@
     <div class="formBox">
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
         <h2>Generar registro</h2><br>
-<form action="#" method="post" target="_blank">
+<form method="get" target="_self">
     <div class="inputBox">
         <div class="col-md-24 left">
             <label>Por fecha</label>
         </div>
         <div class="container">
             <div class="row">
-            <div class="col"> <!-- col-6 -->
-<!--                 <input type="date" name="fecha" id="fechaIpt" value="action">
- -->                 <select aria-describedby="MonthError" aria-label="Mes" class="fecha" id="mes" name="Mes">
-                    <option value='action'> Mes <i class="fa-angle-down"></i>  </option>
-                    <option value="1">Enero</option>
-                    <option value="2">Febrebro</option>
-                    <option value="3">Marzo</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Mayo</option>
-                    <option value="6">Junio</option>
-                    <option value="7">Julio</option>
-                    <option value="8">Agosto</option>
-                    <option value="9">Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
-                </select>  
-                           
-            </div>
-         <div class="col">
-                <select aria-describedby="YearError" class="fecha" aria-label="Year" id="year" name="Year">
-                    <option value='action'>Año<i class="fa-angle-down"> </i></i>  </option>
-                    <option value="1">2022</option>
-                    <option value="2">2023</option>
-                    <option value="3">2024</option>
-                    <option value="4">2025</option>
-                    <option value="5">2026</option>
-                    <option value="6">2027</option>
-                    <option value="7">2028</option>
-                    <option value="8">2029</option>
-                    <option value="9">2030</option>
-                    <option value="10">2031</option>
-                </select>            
-            </div> 
+            <div class="col"> 
+            <input type="month" name="fecha" id="fechaIpt" value="action">
             </div>
         </div>
     </div>
     <br>
+    <!-- dad -->
         <div class="inputBox">
             <div class="col-md-24 left">
                 <label>Por persona</label>
@@ -82,8 +51,8 @@
             <div class="container">
             <div class="row">
                 <div class="col">
-                    <select aria-describedby=PersonError"  aria-label="Persona" id="persona" name="Persona">
-                        <option value='action'>Selecionar persona<i class="fa-angle-down"></i>  </option>
+                    <select  aria-label="Persona" id="persona" name="Persona">
+                        <option value='action'>Selecionar persona </option>
                         <option value="1"> Miguel Alejandro Navarro</option>
                         <option value="2"> Daniela Michelle Torres</option>
                         <option value="3"> Martín Elías Acosta</option>
@@ -111,7 +80,7 @@
             <div class="row">
             <div class="col">
                 <select aria-describedby="PartnerError"  aria-label="Partner" id="partner" name="Partner">
-                    <option value='action'>Seleccionar socio <i class="fa-angle-down"></i>  </option>
+                    <option value='action'>Seleccionar socio </option>
                     <option value="1">Microsoft El Salvador</option>
                     <option value="2">MINSAL</option>
                     <option value="3">USAID</option>
@@ -132,19 +101,19 @@
         <div class="row"> 
             <div class="col">
                 <div class="inputBox">
-                    <button type="reset" id="btnLimpiar" >Limpiar</button> 
+                    <button type="reset" id="btnLimpiar" onclick = "limpiar()">Limpiar</button> 
                 </div>
             </div>
         <div class="col">
             <div class="inputBox">
-                <button type="submit" onClick="javascript:window.open('http://www.google.com', '_self');" value="" id="btnEnviar" title="Submit" name="submit" disabled="true">Aceptar</button>
+                <button type="submit" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" disabled="true">Aceptar</button>
+                <!--   -->
             </div>
         </div>
                     
         </div>
     </div>
- 
-    <br>       
+      
                     
 </form>         
 </div>     

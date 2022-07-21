@@ -9,7 +9,8 @@
             password.setAttribute("type", type);
     
             // toggle the icon
-            this.classList.toggle("bi-eye");
+            this.classList.toggle("fa-eye");
+            //this.classList.toggle("bi-eye");
             //bi-eye <i class="fa-solid fa-eye"></i>
         });
     
@@ -25,9 +26,9 @@ function enviar(){
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     if(username != "" && password != ""){
-       window.open('http://www.google.com', '_self');
+       window.open('index.php', '_self');
     }
     else{
-        console.log("Datos necesarios"); 
+        console.log("Lorem ipsum."); 
     }
 } 

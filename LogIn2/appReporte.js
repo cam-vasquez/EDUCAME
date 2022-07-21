@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('select').change(function () {
         if ($(this).val() == 'action') {
@@ -14,4 +15,39 @@ $(document).ready(function () {
 
         }
     });
-});
+})
+
+
+
+function limpiar(){
+    document.getElementById("partner").disabled = false;
+    document.getElementById("persona").disabled = false;
+    document.getElementById("mes").disabled = false;
+    document.getElementById("year").disabled = false;    
+    
+} 
+
+function enviar(){
+    let partner = document.getElementById("partner").value;
+    let persona = document.getElementById("persona").value;
+    /*let fecha = document.getElementsByClassName("fecha").value;*/
+    let year = document.getElementById("year").value;
+    let mes = document.getElementById("mes").value; 
+    if ((year != '' && mes != '') && ((partner == '' && persona == ''))) {
+        window.open('Dropdown.html', '_self');
+    } 
+    else if (partner != ''  && (year == '' && mes == '' && persona == '')) {
+        window.open('Dropdown.html', '_self');
+        //window.open('index.php', '_self');
+    } 
+    else if (persona != ''  && (year == '' && mes == '' && partner == '')) {
+        window.open('Dropdown.html', '_self');
+        //window.open('index.php', '_self');
+    } 
+    else {
+        console.log("Solo puede seleccionar una opción"); 
+      }
+} 
+
+
+ 

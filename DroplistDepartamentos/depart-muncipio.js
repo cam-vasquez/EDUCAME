@@ -1,18 +1,3 @@
-
-
-
-/* function enviar(){
-    if(departamento != "" && municipio != ""){
-       window.open('http://www.google.com', '_self');
-    }
-    else{
-        console.log("Datos necesarios"); 
-    }
-} 
- */
-
-
-
 //  names and code
 var departamento_and_municipios = {
     departamento : {
