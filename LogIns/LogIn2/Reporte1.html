@@ -17,6 +17,9 @@
 
     <!-- LOCAL FONTAWESOME -->
     <link rel="stylesheet" href="/RESOURCES/fontawesome-free-6.1.1-web/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
 </head>
 <body>
@@ -35,8 +38,9 @@
         <div class="container">
             <div class="row">
             <div class="col"> <!-- col-6 -->
-                <select aria-describedby="MonthError"  aria-label="Mes" class="fecha"  name="Mes">
-                    <option value='fecha'> Mes <i class="fa-angle-down"></i>  </option>
+<!--                 <input type="date" name="fecha" id="fechaIpt" value="action">
+ -->                 <select aria-describedby="MonthError" aria-label="Mes" class="fecha" id="mes" name="Mes">
+                    <option value='action'> Mes <i class="fa-angle-down"></i>  </option>
                     <option value="1">Enero</option>
                     <option value="2">Febrebro</option>
                     <option value="3">Marzo</option>
@@ -49,12 +53,12 @@
                     <option value="10">Octubre</option>
                     <option value="11">Noviembre</option>
                     <option value="12">Diciembre</option>
-                </select> 
+                </select>  
                            
             </div>
-            <div class="col">
-                <select aria-describedby="YearError"  aria-label="Year" id="year" name="Year">
-                    <option value='fecha'>Año<i class="fa-angle-down"> </i></i>  </option>
+         <div class="col">
+                <select aria-describedby="YearError" class="fecha" aria-label="Year" id="year" name="Year">
+                    <option value='action'>Año<i class="fa-angle-down"> </i></i>  </option>
                     <option value="1">2022</option>
                     <option value="2">2023</option>
                     <option value="3">2024</option>
@@ -66,7 +70,7 @@
                     <option value="9">2030</option>
                     <option value="10">2031</option>
                 </select>            
-            </div>
+            </div> 
             </div>
         </div>
     </div>
@@ -116,7 +120,6 @@
                     <option value="6">FEDISAL</option>
                     <option value="7">FEPADE</option>
                     <option value="8">Fundación CINDE</option>
-                    <!-- options can be added to the dropdown list-->
                 </select>                         
             </div> 
         </div>
@@ -129,18 +132,19 @@
         <div class="row"> 
             <div class="col">
                 <div class="inputBox">
-                    <input type="reset" value="Limpiar" id="btnLimpiar" > 
+                    <button type="reset" id="btnLimpiar" >Limpiar</button> 
                 </div>
             </div>
         <div class="col">
             <div class="inputBox">
-                <input type="button" onClick="javascript:window.open('http://www.google.com', '_self');" value="Aceptar" id="btnLogIn"  >
+                <button type="submit" onClick="javascript:window.open('http://www.google.com', '_self');" value="" id="btnEnviar" title="Submit" name="submit" disabled="true">Aceptar</button>
             </div>
         </div>
                     
         </div>
     </div>
-                        
+ 
+    <br>       
                     
 </form>         
 </div>     
@@ -149,9 +153,6 @@
 
 
 <!-- Js Disbale DropdownList Form -->   
-
-
-
 
  <script src="/LogIn2/appReporte.js"></script>
 

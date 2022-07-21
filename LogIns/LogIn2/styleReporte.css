@@ -136,7 +136,7 @@ input:focus::placeholder {
     height: 80px;
  }
 
- #btnLogIn {
+ #btnEnviar {
     color: white;
     background-color: #5047E6;
     font-weight: 500;
@@ -156,7 +156,7 @@ input:focus::placeholder {
     
 }
 
-#btnLogIn:hover{
+#btnEnviar:hover{
     background-color: #4f47e6cb;
     color: #f5f5f5;
     overflow: hidden;
