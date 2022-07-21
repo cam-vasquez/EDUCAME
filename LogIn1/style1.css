@@ -1,0 +1,151 @@
+
+/* importando font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+section .contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;  
+    background-image: near-gradient(to right top, #f2f2f2, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
+    background-image: -webkit-near-gradient(to right top, #f2f2f2, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
+
+}
+
+section .contentBox .formBox{
+    max-width: 455px;
+    min-height: 338px;
+    padding: 40px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5%;   
+}
+
+section .contentBox .formBox h2{
+    font-size: var(--mobile-font-size);
+    color: #5047E6;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: inne-block;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+section .contentBox .formBox .inputBx{
+    margin-bottom: 20px;
+}
+
+section .contentBox .formBox label{
+    font-size: 16px;
+    font-size: var(--mobile-font-size);
+    margin-bottom: 10px;
+    display: inne-block;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+section .contentBox .formBox input{
+    width: -webkit-fill-available;
+    padding: 9px 40px 10px 12px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #b2b1b1;
+    letter-spacing: 1px;
+    background: transparent;
+    border-radius: 5px;
+    
+
+}
+
+section .contentBox .formBox input:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.logo{
+    max-width: 256px;
+    height: 80px;
+}
+
+#submit {
+    color: white;
+    background-color: #5047E6;
+    font-weight: 500;
+    font-size: 20px;
+    font-size: var(--mobile-font-size);
+    padding: 9px 20px 10px 12px;
+    width: -webkit-fill-available;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+ }
+
+
+#submit:hover{
+    background-color: #4f47e6cb;
+    color: #f5f5f5;
+    overflow: hidden;
+    
+}
+/* Toggle  */
+
+div form i {
+    margin-left: -30px;
+    cursor: pointer;
+    
+}
+
+@media(max-width:500px){
+
+    section .contentBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        overflow: hidden;
+        background-color: #ffffff;      
+    }
+
+    section .contentBox .formBox{
+        width: 100%;
+        padding:40px;
+        background: white;
+        /* Se puede cambiar el shadow box*/
+        box-shadow: rgba(255, 255, 255, 0) 0px 3px 8px;
+/*         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ */        margin: 5%;        
+    }
+
+}
