@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 
-
     <!-- LOCAL FONTAWESOME -->
     <link rel="stylesheet" href="/RESOURCES/fontawesome-free-6.1.1-web/css/all.css">
         
@@ -27,25 +26,25 @@
 
 <div class="contentBox">
     <div class="formBox">
-        <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
-        <h2>Seleccionar departamento</h2><br>
+    <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
+    <h2>Seleccionar departamento</h2><br>
 
-<form action="#" method="post" target="_blank">
+<form action="#" method="post" target="_blank" name="formDrp">
 
-    <div class="inputBox">
-        <div class="col-md-24 left">
-            <label>Departamento</label>
-        </div>
-        <div class="container">
-        <div class="row">
-            <div class="col">
-                <select aria-label="Departamento" id="departamento" name="departamento">
-                    <option value='action'>Selecionar departmento<i class="fa-angle-down"></i></option>
-                </select>   
-            </div>    
-        </div>
-        </div>
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Departamento</label>
     </div>
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <select aria-label="Departamento" id="departamento" name="departamento">
+                <option value='action'>Selecionar departmento<i class="fa-angle-down"></i></option>
+            </select>   
+        </div>    
+    </div>
+    </div>
+</div>
 
     <br>
 
@@ -55,28 +54,27 @@
     </div>
     <div class="container">
     <div class="row">
-        <div class="col">
-            <div>
-                <span id="municipio-code"><input type="text" id="municipio"></span>
-                </div>  
-        </div>    
+    <div class="col">
+        <div>
+            <span id="municipio-code"><input type="text" id="municipio"></span>
+        </div>  
+    </div>    
     </div>
     </div>
 </div>
 
 <br>
-<!--  -->
 
 <div class="container">
 <div class="row"> 
     <div class="col">
         <div class="inputBox">
-            <input type="reset" value="Limpiar" id="btnLimpiar" > 
+            <input type="reset" value="Limpiar" id="btnLimpiar" onclick="this.form.reset();" > 
         </div>
     </div>
     <div class="col">
         <div class="inputBox">
-            <button type="submit" onClick="javascript:window.open('http://www.google.com', '_self');" value="Aceptar" id="btnEnviar"></button>
+            <button type="submit"  onClick="javascript:window.open('http://www.google.com', '_self');" value="" id="btnEnviar">Aceptar</button>
         </div>
     </div>            
 </div>
@@ -92,7 +90,7 @@
 
 <script>
     // user departamento code for selected option
-    let user_departamento_code = "IN";
+    let user_departamento_code = "AH";
     
     (function () {
     

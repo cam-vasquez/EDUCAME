@@ -1,13 +1,26 @@
 
-//  names and code
 
-let departamento_and_municipios = {
+
+/* function enviar(){
+    if(departamento != "" && municipio != ""){
+       window.open('http://www.google.com', '_self');
+    }
+    else{
+        console.log("Datos necesarios"); 
+    }
+} 
+ */
+
+
+
+//  names and code
+var departamento_and_municipios = {
     departamento : {
         "AH":"Ahuachapán", 
         "CA":"Cabañas", 
         "CH": "Chalatenango", 
         "CU":"Cuscatlán", 
-        "LI":"La Libertda", 
+        "LI":"La Libertad", 
         "PA":"La Paz", 
         "UN":"La Unión", 
         "MO":"Morazán",
@@ -15,7 +28,7 @@ let departamento_and_municipios = {
         "SS":"San Salvador",
         "SV":"San Vicente", 
         "SA":"Santa Ana", 
-        "SO":"Son Sonate", 
+        "SO":"Sonsonate", 
         "US":"Usulután", 
     },
     
