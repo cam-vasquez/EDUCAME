@@ -50,3 +50,15 @@ let user_departamento_code = "MO";
 
     create_municipios_dropdown();
 })();
+
+
+function enviar(){
+    let departamento = document.getElementById("departamento").value;
+    let municipio = document.getElementById("municipio").value;
+    if(departamento != "" && municipio != ""){
+       window.open('http://www.google.com', '_self');
+    }
+    else{
+        console.log("Datos necesarios"); 
+    }
+} 

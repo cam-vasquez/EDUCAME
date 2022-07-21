@@ -72,12 +72,13 @@
 <div class="row"> 
     <div class="col">
         <div class="inputBox">
-            <input type="reset" value="Limpiar" id="btnLimpiar" onclick="this.form.reset();" > 
+            <button type="reset" value="Limpiar" id="btnLimpiar" >Limpiar</button>
         </div>
     </div>
     <div class="col">
         <div class="inputBox">
-            <button type="submit"  onClick="javascript:window.open('http://www.google.com', '_self');" value="" id="btnEnviar">Aceptar</button>
+            <button type="submit" onclick="enviar()" id="btnEnviar">Aceptar</button>
+            <!-- onClick="javascript:window.open('http://www.google.com', '_self');" value=""  -->
         </div>
     </div>            
 </div>
