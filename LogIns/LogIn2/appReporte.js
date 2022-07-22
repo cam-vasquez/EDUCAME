@@ -1,3 +1,4 @@
+
 let partner = document.getElementById("partner");
 let persona = document.getElementById("persona");
 let date = document.getElementById("fechaIpt");

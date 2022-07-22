@@ -1,3 +1,4 @@
+
 let user_departamento_code = "MO";
     
 (function () {
