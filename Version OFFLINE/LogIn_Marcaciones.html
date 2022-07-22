@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="TabLogo1.png">
+    <title>Login: Agape</title>
+
+    <!-- LOCAL RESOURCES  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap-grid.css" rel="stylesheet">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
+<!-- 
+<style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+section .contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;  
+    background-image: near-gradient(to right top, #f2f2f2, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
+    background-image: -webkit-near-gradient(to right top, #f2f2f2, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
+
+}
+
+section .contentBox .formBox{
+    max-width: 400px;
+    min-height: 338px;
+    padding: 40px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5%;   
+}
+
+section .contentBox .formBox h2{
+    font-size: var(--mobile-font-size);
+    color: #5047E6;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: inne-block;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+section .contentBox .formBox .inputBx{
+    margin-bottom: 20px;
+}
+
+section .contentBox .formBox label{
+    font-size: 16px;
+    font-size: var(--mobile-font-size);
+    margin-bottom: 10px;
+    display: inne-block;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+section .contentBox .formBox input{
+    width: -webkit-fill-available;
+    padding: 9px 40px 10px 12px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #b2b1b1;
+    letter-spacing: 1px;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 5px;
+    
+
+}
+
+section .contentBox .formBox input:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.logo{
+    max-width: 256px;
+    height: 80px;
+}
+
+#submit {
+    color: white;
+    background-color: #5047E6;
+    font-weight: 500;
+    font-size: 20px;
+    font-size: var(--mobile-font-size);
+    padding: 9px 20px 10px 12px;
+    width: -webkit-fill-available;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+ }
+
+
+#submit:hover{
+    background-color: #4f47e6cb;
+    color: #f5f5f5;
+    overflow: hidden;
+    
+}
+/* Toggle  */
+
+div form i {
+    margin-left: -30px;
+    cursor: pointer;
+    
+}
+
+@media(max-width:500px){
+
+    section .contentBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        overflow: hidden;
+        background-color: #ffffff;      
+    }
+
+    section .contentBox .formBox{
+        width: 100%;
+        padding:40px;
+        background: white;
+        /* Se puede cambiar el shadow box*/
+        box-shadow: rgba(255, 255, 255, 0) 0px 3px 8px;
+/*         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ */     margin: 5%;        
+    }
+
+}
+
+</style>   -->
+
+<link rel="stylesheet" href="logInStyle.css">
+
+<style>
+    
+   @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.eot');
+            src: local(''),
+                 url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                 url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                 url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+                 url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                 url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+          }
+
+  /* roboto-500 - latin-ext_latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.woff') format('woff'), /* Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-700 - latin-ext_latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-900 - latin-ext_latin */
+    @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.woff') format('woff'), /* Modern Browsers */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/RESOURCES/fonts/roboto-v30-latin-ext_latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+</style>
+
+</head>
+<body>
+
+<section>
+
+    <div class="contentBox">
+    <div class="formBox" aria-live="polite" > <!--  onsubmit="signup();return false;" onsubmit="signup()"  -->
+        <img src="image.png" alt="gob sv" class="logo">
+            <br>
+            <h2>Control y registro de marcaciones</h2>
+            <br>
+        <form  method="get"  >
+            <div class="inputBox">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="username" placeholder="usuario.mined123" required autocomplete="username" name="username" >
+            </div>
+                    <br>
+           <div class="inputBox">
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="••••••••••••" id="password" name = "password" autocomplete = "current-password" aria-required="true" required><i class="bi-eye-slash" id="togglePassword"></i>
+               
+            </div> 
+         <br>
+            <div class="inputBox">
+                <button type="submit" onclick="enviar()" id="submit" class="submit" >Iniciar sesión</button>
+            </div>
+    
+        </form>
+    </div>
+</div>
+
+</section>
+<!-- 
+<script >
+    
+        /* Js para Toggle Password */
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+    
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+    
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+            //this.classList.toggle("bi-eye");
+            //bi-eye <i class="fa-solid fa-eye"></i>
+        });
+    
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    
+/* END TOGGLE */
+
+function enviar(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    if(username != "" && password != ""){
+       window.open('index.php', '_self');
+    }
+    else{
+        console.log("Lorem ipsum."); 
+    }
+} 
+
+</script> -->
+
+<script src="AppLogin.js"></script>
+
+</body>
+</html>
+
