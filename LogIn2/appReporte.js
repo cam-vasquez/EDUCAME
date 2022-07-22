@@ -48,6 +48,7 @@ function enviar(){
 
 document.getElementById("btnEnviar").onclick = function () {
     location.href = "https://www.google.com/";
+    // la url debe ser cambiada
 };
 
 partner.addEventListener("change", () => checkSend(enviar()));
