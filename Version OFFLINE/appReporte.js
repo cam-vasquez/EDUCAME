@@ -25,31 +25,31 @@ function limpiar(){
 }
 
 function checkSend(checker){
-    console.log(checker);
+    //console.log(checker);
     if(!checker){
         $("#form_registro").submit(function(e){
             e.preventDefault();
         });
     }
     else{
-        $("#form_registro").unbid("submit").submit();
+        $("#form_registro").unbind("submit").submit();
 
 
     }
 }
 
 function enviar(){
-    if((date.value != "" && partner.value > 0) || (date.value != "" && persona.selectedIndex > 0)){
+    if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
         return true;
     }
     else
         return false;
 }
 
-document.getElementById("btnEnviar").onclick = function () {
+/* document.getElementById("btnEnviar").onclick = function () {
     location.href = "index.php";
     // la url debe ser cambiada
-};
+}; */
 
 partner.addEventListener("change", () => checkSend(enviar()));
 persona.addEventListener("change", () => checkSend(enviar()));

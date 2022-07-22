@@ -1,6 +1,8 @@
+let username = document.getElementById("username");
+let password = document.getElementById("password");
 /* Js para Toggle Password */
     const togglePassword = document.querySelector("#togglePassword");
-    const password = document.querySelector("#password");
+    //const password = document.querySelector("#password");
 
     togglePassword.addEventListener("click", function () {
         // toggle the type attribute
@@ -21,13 +23,30 @@
 
 /* END TOGGLE */
 
+$("document").ready(()=>{
+    checkSend(enviar);
+});
+
+function checkSend(checker){
+    //console.log(checker);
+    if(!checker){
+        $("#form_registro").submit(function(e){
+            e.preventDefault();
+        });
+    }
+    else{
+        $("#form_registro").unbind("submit").submit();
+
+    }
+}
+
 function enviar(){
-let username = document.getElementById("username").value;
-let password = document.getElementById("password").value;
-if(username != "" && password != ""){
-   window.open('index.php', '_self');
-}
-else{
-    console.log("Lorem ipsum."); 
-}
+if(username.value != "" && password.value != "") return true;
+else return false;
 } 
+username.addEventListener("change", ()=>{
+    checkSend(enviar());
+});
+password.addEventListener("change", ()=>{
+    checkSend(enviar());
+});
