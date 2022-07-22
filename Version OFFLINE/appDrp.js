@@ -1,64 +1,58 @@
-let user_departamento_code = "MO";
-    
-(function () {
+let partner = document.getElementById("partner");
+let persona = document.getElementById("persona");
+let date = document.getElementById("fechaIpt");
 
-    // Get the departamento name and municipio name from the imported script.
-    // -------------------
-    let departamento_list = departamento_and_municipios['departamento'];
-    let municipios_list = departamento_and_municipios['municipios'];
-
-    // creating departamento name drop-down
-    let option =  '';
-    option += '<option>Seleccionar departamento</option>';
-    for(let departamento_code in departamento_list){
-        // set selected option user departamento
-        let selected = (departamento_code == user_departamento_code) ? ' selected' : '';
-        option += '<option value="'+departamento_code+'"'+selected+'>'+departamento_list[departamento_code]+'</option>';
-    }
-    document.getElementById('departamento').innerHTML = option;
-
-    // creating municipios name drop-down
-    let text_box = '<input type="text" class="input-text" id="municipio">';
-    let municipio_code_id = document.getElementById("municipio-code");
-
-    function create_municipios_dropdown() {
-        // get selected departamento code
-        let departamento_code = document.getElementById("departamento").value;
-        let municipios = municipios_list[departamento_code];
-        // invalid departamento code or no municipios add textbox
-        if(!municipios){
-            municipio_code_id.innerHTML = text_box;
-            return;
-        }
-        let option = '';
-        if (municipios.length > 0) {
-            option = '<select id="municipio">\n';
-            for (let i = 0; i < municipios.length; i++) {
-                option += '<option value="'+municipios[i].code+'">'+municipios[i].name+'</option>';
-            }
-            option += '</select>';
+$(document).ready(function () {
+    $('select').change(function () {
+        if ($(this).val() == 'action') {
+            //$("#btnEnviar").prop('disabled', true);
+            $("select").prop('disabled', false);
+            $("#year").prop('disabled', false);
+            $("#mes").prop('disabled', false);
         } else {
-            // create input textbox if no municipios 
-            option = text_box
+            //$("#btnEnviar").prop('disabled', false);
+            $("select").not(this).prop('disabled', true);
+            $("#year").not(this).prop('disabled', false);
+            $("#mes").not(this).prop('disabled', false);
         }
-        municipio_code_id.innerHTML = option;
-    }
+    });
+    checkSend(enviar());
+});
 
-    // departamento select change event
-    const departamento_select = document.getElementById("departamento");
-    departamento_select.addEventListener('change', create_municipios_dropdown);
+function limpiar(){
+    document.getElementById("partner").disabled = false;
+    document.getElementById("persona").disabled = false;
+}
 
-    create_municipios_dropdown();
-})();
-
-
-function enviar(){
-    let departamento = document.getElementById("departamento").value;
-    let municipio = document.getElementById("municipio").value;
-    if(departamento != "" && municipio != ""){
-       window.open('Dropdown.html', '_self');
+function checkSend(checker){
+    //console.log(checker);
+    if(!checker){
+        $("#form_registro").submit(function(e){
+            e.preventDefault();
+        });
     }
     else{
-        console.log("Datos necesarios"); 
+        $("#form_registro").unbind("submit").submit();
+
+
     }
-} 
+}
+
+function enviar(){
+    if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
+        return true;
+    }
+    else
+        return false;
+}
+
+/* document.getElementById("btnEnviar").onclick = function () {
+    location.href = "index.php";
+    // la url debe ser cambiada
+}; */
+
+partner.addEventListener("change", () => checkSend(enviar()));
+persona.addEventListener("change", () => checkSend(enviar()));
+date.addEventListener("change", () => checkSend(enviar()));
+
+
