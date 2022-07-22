@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/RESOURCES/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 
     <!-- LOCAL FONT -->
-    <link rel="stylesheet" href="/RESOURCES/font.css">
+   <!--  <link rel="stylesheet" href="/RESOURCES/font.css"> -->
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -29,8 +29,9 @@
 <div class="contentBox">
     <div class="formBox">
         <img src="/RESOURCES/image.png" alt="gob sv" class="logo"><br>
-        <h2>Generar registro</h2><br>
-<form method="get" target="_self">
+        <h2>Generar registro</h2>
+        <br>
+<form method="get" target="_blank" id="form_registro">
     <div class="inputBox">
         <div class="col-md-24 left">
             <label>Por fecha</label>
@@ -106,8 +107,7 @@
             </div>
         <div class="col">
             <div class="inputBox">
-                <button type="submit" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" disabled="true">Aceptar</button>
-                <!--   -->
+                <button type="send" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
             </div>
         </div>
                     
@@ -120,9 +120,7 @@
 </div>
 </section>
 
-
 <!-- Js Disbale DropdownList Form -->   
-
  <script src="/LogIn2/appReporte.js"></script>
 
     <!-- Js libraries and so -->
