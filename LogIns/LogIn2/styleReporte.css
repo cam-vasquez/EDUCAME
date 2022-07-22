@@ -1,7 +1,9 @@
+/* Pra hacer local las fuentes solo basta comentar el import en el css y quitar de los comentarios  */
 
-/* // importando font 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;

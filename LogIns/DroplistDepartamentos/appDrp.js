@@ -56,7 +56,7 @@ function enviar(){
     let departamento = document.getElementById("departamento").value;
     let municipio = document.getElementById("municipio").value;
     if(departamento != "" && municipio != ""){
-       window.open('http://www.google.com', '_self');
+       window.open('Dropdown.html', '_self');
     }
     else{
         console.log("Datos necesarios"); 
