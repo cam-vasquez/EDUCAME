@@ -11,8 +11,7 @@ let password = document.getElementById("password");
 
         // toggle the icon
         this.classList.toggle("bi-eye");
-        //this.classList.toggle("bi-eye");
-        //bi-eye <i class="fa-solid fa-eye"></i>
+       
     });
 
     // prevent form submit
