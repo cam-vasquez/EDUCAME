@@ -46,11 +46,6 @@ function enviar(){
         return false;
 }
 
-/* document.getElementById("btnEnviar").onclick = function () {
-    location.href = "index.php";
-    // la url debe ser cambiada
-}; */
-
 partner.addEventListener("change", () => checkSend(enviar()));
 persona.addEventListener("change", () => checkSend(enviar()));
 date.addEventListener("change", () => checkSend(enviar()));
