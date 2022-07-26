@@ -60,12 +60,15 @@ section .contentBox .formBox .inputBx{
 section .contentBox .formBox label{
     font-size: 16px;
     font-size: var(--mobile-font-size);
-    margin-bottom: 10px;
     display: inne-block;
     color: black;
     font-weight: 500;
     font-size: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 1px;   
+    margin-bottom: 5px;
+/*     margin-bottom: 10px;
+ */
+
 }
 
 section .contentBox .formBox input{
@@ -77,8 +80,9 @@ section .contentBox .formBox input{
     letter-spacing: 1px;
     background: transparent;
     border-radius: 5px;
-    margin-top: 10px;
-    
+    margin-top: 0px;
+/*     margin-top: 0px;
+ */
 
 }
 
