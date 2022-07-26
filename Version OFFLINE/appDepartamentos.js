@@ -3,7 +3,6 @@ let user_departamento_code = "MO";
 (function () {
 
     // Get the departamento name and municipio name from the imported script.
-    // -------------------
     let departamento_list = departamento_and_municipios['departamento'];
     let municipios_list = departamento_and_municipios['municipios'];
 
@@ -46,9 +45,10 @@ let user_departamento_code = "MO";
 
     // departamento select change event
     const departamento_select = document.getElementById("departamento");
+    departamento_select.selectedIndex = 0;
     departamento_select.addEventListener('change', create_municipios_dropdown);
-
     create_municipios_dropdown();
+
 })();
 
 
