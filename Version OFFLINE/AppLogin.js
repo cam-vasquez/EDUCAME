@@ -15,11 +15,11 @@ let password = document.getElementById("password");
        
     });
 
-    // prevent form submit
+ /*    // prevent form submit
     const form = document.querySelector("form");
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-    });
+    }); */
 
 /* END TOGGLE */
 
