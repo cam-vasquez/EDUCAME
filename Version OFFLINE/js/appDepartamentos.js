@@ -50,21 +50,7 @@ let user_departamento_code = "MO";
     create_municipios_dropdown();
 
 })();
-/*
-function checkSend(checker){
-    let formulario = document.getElementById("form_registro");
-    if(!checker){  
-        formulario.addEventListener("submit", function(e){
-            e.preventDefault();
-        });
-    }
-    else{
-        formulario.addEventListener("submit", function(e){
-            e.stopPropagation();
-        });
-    }
-}
-*/
+
 function enviar(){
     var departamento = document.getElementById("departamento");
     var municipio = document.getElementById("municipio");
@@ -80,5 +66,3 @@ function enviar(){
         console.log("Datos necesarios"); 
     }
 } 
-//checkSend(false);
-/*  */

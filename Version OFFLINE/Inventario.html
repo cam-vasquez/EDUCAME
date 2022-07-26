@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+    
+    <link rel="icon" href="TabLogo1.png">
+    <link rel="stylesheet" href="css/styleInventario.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+   
+</head>
+<body>
+
+<section>
+
+<div class="contentBox">
+    <div class="formBox">
+        <img src="image.png"  alt="Gobierno SV" class="logo"><br>
+        <h2>Inventario de bienes</h2>
+        <br>
+<form method="get" target="_self" id="form_registro">
+    <div class="inputBox">
+        <div class="col-md-24 left">
+            <label>Número de bien</label>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="col"> 
+            <input type="text" name="num_bien"  value="" required placeholder="35-1164-024"> <!-- Poner los guines para que se autocomplete -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- placeholder="35-1164-024 -->
+<br>
+
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Descripcion</label>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col"> 
+        <input type="text" name="descripcion" placeholder="Escriba la descripción del bien" required>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col-6" style="padding-left: 0px; padding-right: 5px;">
+        <div class="col-md-24 left">
+            <label>Marca</label>
+        </div>    
+        <input type="text" name="marca" placeholder="ORBITEC" required>
+    </div>
+    <div class="col-6" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-md-24 left">
+            <label>Modelo</label>
+        </div>    
+        <input type="text" name="modelo" placeholder="TU-1006" required>
+    </div>  
+    </div>
+</div>
+</div>
+
+<br>
+
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Serie</label>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col"> 
+        <input type="text" name="descripcion" placeholder="2132GY0OM758700076" required>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+ <div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col-6" style="padding-left: 0px; padding-right: 5px;">
+        <div class="col-md-24 left">
+            <label>Fecha</label>
+        </div>    
+        <input type="date" name="fecha" required> <!-- Validar fecha, whre fecha <=  fechaHoy -->
+    </div>
+    <div class="col-6" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-md-24 left">
+            <label>Precio</label>
+        </div>    
+        <input type="number" name="precio" step='0.01' value='0.00' required>
+    </div>  
+    </div>
+</div>
+</div>
+
+<br>
+
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Estado</label>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col"> 
+         <input type="radio" name="" id="">
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="inputBox">
+    <div class="col-md-24 left">
+        <label>Serie</label>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col"> 
+        <input type="text" name="descripcion" placeholder="2132GY0OM758700076" required>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="container">
+        <div class="row"> 
+            <div class="col">
+                <div class="inputBox">
+                    <button type="reset" id="btnLimpiar">Limpiar</button>
+<!--                     <button type="reset" id="btnLimpiar" onclick = "limpiar()">Limpiar</button> 
+ -->                </div>
+            </div>
+        <div class="col">
+            <div class="inputBox">
+<!--                 <button type="send" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
+ -->                <button type="submit"  id="btnEnviar">Enviar</button>
+            </div>
+        </div>
+                    
+        </div>
+    </div>
+      
+                    
+</form>         
+</div>     
+</div>
+</section>
+
+
+<!-- <script src="js/appInventario.js"></script>
+ --><script src="js/bootstrap.min.js"></script>
+
+</body>

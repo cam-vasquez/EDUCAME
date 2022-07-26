@@ -112,7 +112,7 @@ section .contentBox .formBox input {
     padding: 10px;
     outline: none;
     font-weight: 400;
-    border: 1px sod rgb(149, 149, 149);
+    border: 1px solid rgb(149, 149, 149);
     letter-spacing: 1px;
     background: transparent;
     border-radius: 5px;
@@ -120,7 +120,7 @@ section .contentBox .formBox input {
 }
 
 section .contentBox .formBox input:hover{
-    border: 1px sod #5047E6;
+    border: 1px solid #5047E6;
     overflow: hidden;
 }
 
