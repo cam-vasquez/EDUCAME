@@ -58,6 +58,8 @@ function enviar(){
     if(departamento != "" && municipio != ""){
        window.open('index.php', '_self');
        console.log("xi"); 
+       console.log(departamento.value);
+       console.log(municipio.value);
     }
     else{
         console.log("Datos necesarios"); 

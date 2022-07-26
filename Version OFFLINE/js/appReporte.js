@@ -19,9 +19,9 @@ $(document).ready(function () {
     checkSend(enviar());
 });
 
-function limpiar(){
-    document.getElementById("partner").disabled = false;
+function limpiar(){    
     document.getElementById("persona").disabled = false;
+    document.getElementById("partner").disabled = false;
 }
 
 function checkSend(checker){
