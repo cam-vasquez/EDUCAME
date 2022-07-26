@@ -57,6 +57,7 @@ function enviar(){
     let municipio = document.getElementById("municipio").value;
     if(departamento != "" && municipio != ""){
        window.open('index.php', '_self');
+       console.log("xi"); 
     }
     else{
         console.log("Datos necesarios"); 
