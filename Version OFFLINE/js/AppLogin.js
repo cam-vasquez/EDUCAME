@@ -1,7 +1,8 @@
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 
-/* Js para Toggle Password */
+/* Start toggle for password */
+
     const togglePassword = document.querySelector("#togglePassword");
     //const password = document.querySelector("#password");
 
