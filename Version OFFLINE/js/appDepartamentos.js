@@ -8,7 +8,7 @@ let user_departamento_code = "MO";
 
     // creating departamento name drop-down
     let option =  '';
-    option += '<option value = "none">Seleccionar departamento</option>';
+    option += '<option value = "">Seleccionar departamento</option>';
     for(let departamento_code in departamento_list){
         // set selected option user departamento
         let selected = (departamento_code == user_departamento_code) ? ' selected' : '';
@@ -17,30 +17,29 @@ let user_departamento_code = "MO";
     document.getElementById('departamento').innerHTML = option;
 
     // creating municipios name drop-down
-    let text_box = '<input type="text" class="input-text" id="municipio">';
     let municipio_code_id = document.getElementById("municipio-code");
-
+    
     function create_municipios_dropdown() {
+        let option = '<select id="municipio" name="municipio">';
         // get selected departamento code
         let departamento_code = document.getElementById("departamento").value;
         let municipios = municipios_list[departamento_code];
         // invalid departamento code or no municipios add textbox
         if(!municipios){
-            municipio_code_id.innerHTML = text_box;
+            option += '<option value="">Seleccione municipio</option></select> ';
+            municipio_code_id.innerHTML = option;
             return;
         }
-        let option = '';
-        if (municipios.length > 0) {
-            option = '<select id="municipio">\n';
-            option += '<option value="none">Seleccione municipio</option>';
+        else if (municipios.length > 0) {
+            option += '<option value="">Seleccione municipio</option>';
             for (let i = 0; i < municipios.length; i++) {
                 option += '<option value="'+municipios[i].code+'">'+municipios[i].name+'</option>';
             }
             option += '</select>';
-        } else {
+        } /*else {
             // create input textbox if no municipios 
             option = text_box
-        }
+        }*/
         municipio_code_id.innerHTML = option;
     }
 
@@ -51,7 +50,7 @@ let user_departamento_code = "MO";
     create_municipios_dropdown();
 
 })();
-
+/*
 function checkSend(checker){
     let formulario = document.getElementById("form_registro");
     if(!checker){  
@@ -65,22 +64,21 @@ function checkSend(checker){
         });
     }
 }
-
+*/
 function enviar(){
-    let departamento = document.getElementById("departamento");
-    let municipio = document.getElementById("municipio");
-    if(departamento.value != "none" && municipio.value != "none"){
+    var departamento = document.getElementById("departamento");
+    var municipio = document.getElementById("municipio");
+    if(departamento.value != "" && municipio.value != ""){
        //window.open('index.php', '_self');
-       console.log(departamento.value);
-       console.log(municipio.value);
-       return true;
+       /*console.log(departamento.value);
+       console.log(municipio.value);*/
+       //return true;
+       
+       document.getElementById("form_registro").submit();
     }
     else{
         console.log("Datos necesarios"); 
-        return false;
     }
 } 
-document.getElementById("departamento").addEventListener("change", checkSend(enviar()));
-document.getElementById("municipio").addEventListener("change", checkSend(enviar()));
-checkSend(false);
+//checkSend(false);
 /*  */

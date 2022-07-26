@@ -27,7 +27,7 @@
     <img src="image.png"  alt="Gobierno SV" class="logo"><br>
     <h2>Seleccionar departamento</h2><br>
 
-<form action="index.php" method="get" target="_self" name="form_departamento" id="form_registro">
+<form  method="get" target="_self" name="form_departamento" id="form_registro">
 
 <div class="inputBox">
     <div class="col-md-24 left">
@@ -53,7 +53,7 @@
     <div class="row">
     <div class="col">
         <div>
-            <span id="municipio-code"><input type="text" id="municipio"></span>
+            <span id="municipio-code"></span>
         </div>  
     </div>    
     </div>
@@ -71,7 +71,7 @@
     </div>
     <div class="col">
         <div class="inputBox">
-            <button type="submit" onclick="enviar()" id="btnEnviar">Aceptar</button>
+            <button type="button" onclick="javascript:enviar();" id="btnEnviar">Aceptar</button>
         </div>
     </div>            
 </div>
