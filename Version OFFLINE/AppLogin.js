@@ -15,52 +15,22 @@ let password = document.getElementById("password");
        
     });
 
- /*    // prevent form submit
-    const form = document.querySelector("form");
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-    }); */
-
 /* END TOGGLE */
 
 
-$(document).ready(()=>{
-    checkSend(enviar);
-});
-
-
-/* $(document).ready(function(){
-    checkSend(enviar);
-});
-
-$(document).ready(function () {
-    $('select').change(function () {
-        if ($(this).val() == 'action') {
-            //$("#btnEnviar").prop('disabled', true);
-            $("select").prop('disabled', false);
-            $("#year").prop('disabled', false);
-            $("#mes").prop('disabled', false);
-        } else {
-            //$("#btnEnviar").prop('disabled', false);
-            $("select").not(this).prop('disabled', true);
-            $("#year").not(this).prop('disabled', false);
-            $("#mes").not(this).prop('disabled', false);
-        }
-    });
-    checkSend(enviar());
-}); */
-
-
 function checkSend(checker){
-    //console.log(checker);
+    console.log(checker)
     if(!checker){
-        $("#form_registro").submit(function(e){
+        document.getElementById("#form_registro").addEventListener("submit", function(e){
+            console.log(e);
             e.preventDefault();
         });
     }
     else{
-        $("#form_registro").unbind("submit").submit();
-
+        document.getElementById("#form_registro").addEventListener("submit", function(e){
+            e.stopPropagation();
+            console.log(e);
+        }, true);
     }
 }
 
@@ -74,3 +44,26 @@ function enviar(){
 
 username.addEventListener("change", () => checkSend(enviar()));
 password.addEventListener("change", () => checkSend(enviar()));
+
+checkSend(enviar());
+
+
+// Usando JQuery
+
+/* $(document).ready(()=>{
+    checkSend(enviar);
+});
+
+function checkSend(checker){
+    //console.log(checker);
+    if(!checker){
+        $("#form_registro").submit(function(e){
+            e.preventDefault();
+        });
+    }
+    else{
+        $("#form_registro").unbind("submit").submit();
+
+    }
+}
+ */
