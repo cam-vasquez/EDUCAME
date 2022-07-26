@@ -34,8 +34,8 @@ municipios: {
         {"name":"Tacuba","code":"TC"},
         {"name":"Turín ","code":"TU"}],
     "CA":[
-        {"name":"Cinquera ","code":"AH"},
-        {"name":"Dolores ","code":"CA"},
+        {"name":"Cinquera ","code":"CNQ"},
+        {"name":"Dolores ","code":"DO"},
         {"name":"Guacotecti ","code":"GT"},
         {"name":"Ilobasco ","code":"IL"},
         {"name":"Jutiapa","code":"JU"},

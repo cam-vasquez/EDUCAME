@@ -8,7 +8,7 @@ let user_departamento_code = "MO";
 
     // creating departamento name drop-down
     let option =  '';
-    option += '<option>Seleccionar departamento</option>';
+    option += '<option value = "none">Seleccionar departamento</option>';
     for(let departamento_code in departamento_list){
         // set selected option user departamento
         let selected = (departamento_code == user_departamento_code) ? ' selected' : '';
@@ -32,6 +32,7 @@ let user_departamento_code = "MO";
         let option = '';
         if (municipios.length > 0) {
             option = '<select id="municipio">\n';
+            option += '<option value="none">Seleccione municipio</option>';
             for (let i = 0; i < municipios.length; i++) {
                 option += '<option value="'+municipios[i].code+'">'+municipios[i].name+'</option>';
             }
@@ -51,19 +52,35 @@ let user_departamento_code = "MO";
 
 })();
 
+function checkSend(checker){
+    let formulario = document.getElementById("form_registro");
+    if(!checker){  
+        formulario.addEventListener("submit", function(e){
+            e.preventDefault();
+        });
+    }
+    else{
+        formulario.addEventListener("submit", function(e){
+            e.stopPropagation();
+        });
+    }
+}
 
 function enviar(){
-    let departamento = document.getElementById("departamento").value;
-    let municipio = document.getElementById("municipio").value;
-    if(departamento != "" && municipio != ""){
-       window.open('index.php', '_self');
-       console.log("xi"); 
+    let departamento = document.getElementById("departamento");
+    let municipio = document.getElementById("municipio");
+    if(departamento.value != "none" && municipio.value != "none"){
+       //window.open('index.php', '_self');
        console.log(departamento.value);
        console.log(municipio.value);
+       return true;
     }
     else{
         console.log("Datos necesarios"); 
+        return false;
     }
 } 
-
+document.getElementById("departamento").addEventListener("change", checkSend(enviar()));
+document.getElementById("municipio").addEventListener("change", checkSend(enviar()));
+checkSend(false);
 /*  */
