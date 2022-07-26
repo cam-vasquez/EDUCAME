@@ -9,4 +9,6 @@ https://developers.google.com/fonts
 
 https://www.jotform.com/widgets/category/mapping
 
+https://gradients.shecodes.io/gradients/192
+
 https://www.jetbrains.com/idea/guide/tips/paste-png-markdown-editor/
