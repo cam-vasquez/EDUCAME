@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registros</title>
     
-    <link rel="icon" href="http://192.168.73.29/marcaciones/TabLogo1.png">
-    <link rel="stylesheet" href="./Registros_files/styleReporte.css">
-    
-    <!-- LOCAL BOOTSTRAP  -->
-    <link rel="stylesheet" href="./Registros_files/bootstrap.min.css">
-    <link rel="stylesheet" href="./Registros_files/bootstrap-icons.css">
-    <script src="./Registros_files/jquery-3.6.0.min.js.descarga"></script>
+    <link rel="icon" href="TabLogo1.png">    
+    <link rel="stylesheet" href="css/styleReporte.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
    
-<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style><style type="text/css">body.swal2-shown:not(.swal2-no-backdrop) {
-  overflow-y: hidden; }
+<style type="text/css">
 
 body.swal2-toast-shown {
   overflow-y: auto; }
@@ -1224,14 +1222,17 @@ body.swal2-no-backdrop > .swal2-shown {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
-</style></head>
+</style>
+
+</head>
+
 <body>
 
 <section>
 
 <div class="contentBox">
     <div class="formBox">
-        <img src="./Registros_files/image.png" alt="gob sv" class="logo"><br>
+        <img src="image.png" alt="gob sv" class="logo"><br>
         <h2>Generar registro</h2>
         <br>
 <form method="get" target="_self" id="form_registro" action="http://192.168.73.29/marcaciones/plantilla.php">
@@ -1247,7 +1248,6 @@ body.swal2-no-backdrop > .swal2-shown {
         </div>
     </div>
     <br>
-    <!-- dad -->
         <div class="inputBox">
             <div class="col-md-24 left">
                 <label>Por persona</label>
@@ -1257,7 +1257,7 @@ body.swal2-no-backdrop > .swal2-shown {
                 <div class="col">
                     <select aria-label="Persona" id="persona" name="persona">
                         
-						<option value="action" selected="selected">SELECCIONAR</option>
+						<option value="action" selected>Seleccionar persona</option>
         
 						<option value="163">Adrian Pineda Lopez</option>
 						<option value="169">Alexandra Betsabe Orella</option>
@@ -1314,7 +1314,7 @@ body.swal2-no-backdrop > .swal2-shown {
             <div class="row">
             <div class="col">
                 <select aria-describedby="PartnerError" aria-label="Partner" id="partner" name="partner" disabled="">
-					  <option value="action" selected="selected">SELECCIONAR</option>
+					  <option value="action" selected>Seleccionar socio</option>
 					  <option value="2">AGAPE</option>
 					  <option value="16">FEYALEGRIA</option>
 					  <option value="10">SELIMZA</option>
@@ -1343,14 +1343,14 @@ body.swal2-no-backdrop > .swal2-shown {
                     
         </div>
     </div>
-      
+     
                     
          
 </div></form>     
 </div>
 </div></section>
 
-<script src="./Registros_files/appReporte.js.descarga"></script>
+<script src="js/appReporte.js"></script>
 
 
 
