@@ -37,6 +37,13 @@ section {
     
 }
 
+section .contentBox .formBox .alert{
+    display: none; 
+    margin-bottom: 8px;
+    height: 30px;
+    line-height:30px;
+    padding:0px 15px;
+}
 section .contentBox{
     display: flex;
     justify-content: center;
@@ -114,7 +121,7 @@ input:focus::placeholder {
 }
  
 
- #btnEnviar {
+#btnEnviar {
     color: white;
     background-color: #5047E6;
     font-weight: 500;

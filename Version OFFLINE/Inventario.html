@@ -26,7 +26,7 @@
   <br> 
   <br>      
         
-<form method="get" target="_self" id="form_registro" action="index.ph">
+<form method="get" target="_self" id="form_bienes" action="index.ph">
 
          
 <div class="inputBox">
@@ -36,13 +36,13 @@
         <div class="col-md-24 left">
             <label>Número de bien</label>
         </div>    
-        <input type="text" name="id_bien" placeholder="4564-SFE4-0434" required autocomplete>        
+        <input type="text" name="id_bien" id = "id_bien" placeholder="4564-SFE4-0434" required autocomplete>        
     </div>
     <div class="col-7" style="padding-left: 0px; padding-right: 0px;">
         <div class="col-md-24 left">
             <label>Descripción</label>
         </div>    
-        <input type="text" name="marca" placeholder="Escriba la descripcion del bien" required autocomplete>
+        <input type="text" name="descripcion" id="descripcion"  placeholder="Escriba la descripcion del bien" required autocmplete>
     </div>
 </div>
 </div>
@@ -55,19 +55,19 @@
         <div class="col-md-24 left">
             <label>Marca</label>
         </div>    
-        <input type="text" name="marca" placeholder="ORBITEC" required autocomplete>
+        <input type="text" name="marca" id="marca" placeholder="ORBITEC" required autocomplete>
     </div>
     <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
         <div class="col-md-24 left">
             <label>Modelo</label>
         </div>    
-        <input type="text" name="modelo" placeholder="TU-1006" required autocomplete>
+        <input type="text" name="modelo" id="modelo" placeholder="TU-1006" required autocomplete>
     </div> 
     <div class="col-4" style="padding-left: 0px; padding-right: 0px;">
         <div class="col-md-24 left">
             <label>Serie</label>
         </div>    
-        <input type="text" name="serie" placeholder="6111801568" required autocomplete>
+        <input type="text" name="serie" id="serie" placeholder="6111801568" required autocomplete>
     </div> 
     
     </div>
@@ -81,13 +81,13 @@
         <div class="col-md-24 left">
             <label>Fecha de adq.</label>
         </div>    
-        <input type="date" name="fecha" required>        
+        <input type="date" name="fecha" id= "fecha" required>        
     </div>
     <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
         <div class="col-md-24 left">
             <label>Precio</label>
         </div>    
-        <input type="number" name="precio" step='0.01'  placeholder='0.00' required />
+        <input type="number" name="precio" id="precio" step='0.01'  placeholder='0.00' required />
     </div>
     <div class="col-4" style="padding-left: 0px; padding-right: 0px;">
         <div class="col-md-24 left">
@@ -107,27 +107,36 @@
 <div class="inputBox">
     <div class="container">
     <div class="row">
-    <div class="col" style="padding-left: 0px; padding-right: 0px;">
+    <div class="col" style="padding-left: 0px; padding-right: 0px;     padding-right: 0px;
+    ">
         <div class="col-md-24 left">
             <label>Observaciones</label>
         </div>    
-        <input type="text" name="observaciones" placeholder="Lorem ipsum dolor sit amet." required>        
+        <input type="text" name="observaciones" id="observaciones" placeholder="Observaciones del bien" required>        
     </div>
     </div>
 </div>
 </div>
 <br>
+
+<div class="alert alert-warning" role="alert" id="alert" >
+    <div>
+        <strong>Atención:</strong> campos vacíos, completelos
+    </div>
+  </div>
+
+
 <!-- Hay que cambiar los botones, estan feos xd -->
     <div class="container">
             <div class="row"> 
                 <div class="col" style="padding-left: 0px; padding-right: 15px;">
                     <div class="inputBox">
-                        <button type="reset" id="btnLimpiar" style="padding-left: 0px; padding-right: 0px;">Limpiar</button>
+                        <button type="reset" id="btnLimpiar" onclick = "javascript:limpiar()" style="padding-left: 0px; padding-right: 0px;">Limpiar</button>
                     </div>
                 </div>
             <div class="col"  >
                 <div class="inputBox">
-                  <button type="submit"  id="btnEnviar" style="padding-right: 0px;" >Enviar</button>
+                  <button type="button" onclick="javascript:enviar();" id="btnEnviar" style="padding-right: 0px;" >Enviar</button>
                 </div>
             </div>
                         
@@ -145,7 +154,47 @@
 </section>
 
 
-<!-- <script src="js/appInventario.js"></script>
- --><script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/appInventario.js"></script> -->
+
+<script> 
+    let descripcion = document.getElementById("descripcion");
+    let modelo = document.getElementById("modelo");
+    let numero = document.getElementById("id_bien");
+    let marca = document.getElementById("marca");
+    let precio = document.getElementById("precio");
+    let serie = document.getElementById("serie");
+    let observacion = document.getElementById("observaciones");
+    let fecha = document.getElementById("fecha");
+    let estado = document.getElementById("slcEstado");
+    let alerta = document.getElementById("alert");
+    
+    function enviar(){
+        //if(select.value != "" && fecha <= now){
+            if(numero.value != "" && descripcion.value != "" && marca.value != "" && modelo.value != "" && serie.value != "" && fecha.value != "" && estado.value != "" && observacion.value != "" && numero.value != null){
+                document.getElementById("form_bienes").submit();
+            }
+            else{
+                alerta.style.display = "inline-block"; 
+                alerta.style.width = "100%"; 
+                alerta.style.overflow = "hidden"; 
+                
+            }
+            descripcion.addEventListener("focus", ()=> alerta.style.display = "none");
+            modelo.addEventListener("focus", ()=> alerta.style.display = "none");
+            numero.addEventListener("focus", ()=> alerta.style.display = "none");
+            marca.addEventListener("focus", ()=> alerta.style.display = "none");
+            precio.addEventListener("focus", ()=> alerta.style.display = "none");
+            observacion.addEventListener("focus", ()=> alerta.style.display = "none");
+            fecha.addEventListener("focus", ()=> alerta.style.display = "none");
+            estado.addEventListener("focus", ()=> alerta.style.display = "none");
+            serie.addEventListener("focus", ()=> alerta.style.display = "none");
+        }
+    function limpiar(){
+        alerta.style.display = "none";
+    }
+        
+</script>
+
+<script src="js/bootstrap.min.js"></script>
 
 </body>
