@@ -24,6 +24,17 @@
     <!-- ****************************** -->
  <style>
 
+.col {
+    width: 100%;
+}
+
+#persona {
+  width: 100%;
+}
+
+#partner {
+  width: 100%;
+}
 
 * {
     margin: 0;
@@ -360,11 +371,18 @@ $(document).ready(function () {
             persona.disabled = true;
 
         }
+        else {
+            persona.disabled = false;
+        }
     }
     persona.onchange = function(){
         if(this.value != "action"){
             partner.selectedIndex = 0;
             partner.disabled = true;
+        }
+        else{
+
+            partner.disabled = false;
         }
     }
     checkSend(enviar());
