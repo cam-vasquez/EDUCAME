@@ -3,17 +3,24 @@ let password = document.getElementById("password");
 
 /* Start toggle for password */
 
-    const togglePassword = document.querySelector("#togglePassword");
+    const togglePassword = document.getElementById("togglePassword");
     //const password = document.querySelector("#password");
 
     togglePassword.addEventListener("click", function () {
         // toggle the type attribute
         const type = password.getAttribute("type") === "password" ? "text" : "password";
         password.setAttribute("type", type);
-
         // toggle the icon
-        this.classList.toggle("bi-eye");
-       
+        //this.classList.toggle("bi-eye");
+        console.log(togglePassword.className)
+        if(this.className == "toggle"){
+            this.src = "eye.svg";
+            this.className = "untoggle";
+        }
+        else if(this.className == "untoggle"){
+            this.src = "eye-slash.svg";
+            this.className = "toggle";
+        } 
     });
 
 /* END TOGGLE */
