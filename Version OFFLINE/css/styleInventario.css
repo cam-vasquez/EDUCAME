@@ -37,13 +37,14 @@ section {
     
 }
 
-section .contentBox .formBox .alert{
+section .contentBox .formBox #alert{
     display: none; 
     margin-bottom: 8px;
     height: 30px;
     line-height:30px;
     padding:0px 15px;
 }
+
 section .contentBox{
     display: flex;
     justify-content: center;
@@ -55,14 +56,17 @@ section .contentBox{
 
 section .contentBox .formBox {
     min-width: 750px;
-    min-height: 400px;
+    min-height: 672px;
     padding: 40px;
     background: white;
-    box-shadow: none;
-  /*   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; */
+   /*   box-shadow: none;*/
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; 
     border-radius: 5px;
     margin: 0px;  
+    
 }
+
+/* 750 x 672 */
 
 section .contentBox .formBox h2 {
     font-size: var(--mobile-font-size);
@@ -74,7 +78,6 @@ section .contentBox .formBox h2 {
     letter-spacing: 1px;
     justify-content: center;
     text-align: center; 
-
     width: 100%;
 }
 
@@ -114,6 +117,8 @@ section .contentBox .formBox input:hover{
 input:focus::placeholder {
     color: transparent;
 }
+
+
 
 #logo{
     min-width: 100px;
