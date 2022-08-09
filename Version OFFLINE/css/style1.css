@@ -23,14 +23,13 @@ section .contentBox{
     width: 100%;
     height: 100%;
     background: #4f47e6bd;  
-   /*  background-image: near-gradient(to right top, #cecece, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
-    background-image: -webkit-near-gradient(to right top, #f2f2f2, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
- */
+    background-image: near-gradient(to right top, #cecece, #ebebeb, #e4e4e4, #dddddd, #d6d6d6);
+ 
 }
 
 section .contentBox .formBox{
     max-width: 455px;
-    min-height: 338px;
+    min-height: 593px;
     padding: 40px;
     background: white;/*  */
     box-shadow: none;
@@ -68,6 +67,8 @@ section .contentBox .formBox label{
 }
 
 section .contentBox .formBox input{
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
     padding: 9px 40px 10px 12px;
     outline: none;
@@ -101,6 +102,8 @@ input:focus::placeholder {
     font-size: 20px;
     font-size: var(--mobile-font-size);
     padding: 9px 20px 10px 12px;
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
     border: none;
     font-weight: 600;
