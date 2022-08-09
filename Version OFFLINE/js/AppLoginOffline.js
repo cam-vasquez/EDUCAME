@@ -1,36 +1,41 @@
 let username = document.getElementById("username");
 let password = document.getElementById("password");
- 
- 
-      const togglePassword = document.querySelector("#togglePassword");
 
-      togglePassword.addEventListener("click", function () {
-          // toggle the type attribute
-          const type = password.getAttribute("type") === "password" ? "text" : "password";
-          password.setAttribute("type", type);
+/* Start toggle for password */
 
-          // toggle the icon
-          this.classList.toggle("bi-eye");
-      });
+    const togglePassword = document.getElementById("togglePassword");
+    //const password = document.querySelector("#password");
 
-      // prevent form submit
-      const form = document.querySelector("form");
-      form.addEventListener('submit', function (e) {
-          e.preventDefault();
-      });
+    togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the icon
+        //this.classList.toggle("bi-eye");
+        console.log(togglePassword.className)
+        if(this.className == "toggle"){
+            this.src = "eye.svg";
+            this.className = "untoggle";
+        }
+        else if(this.className == "untoggle"){
+            this.src = "eye-slash.svg";
+            this.className = "toggle";
+        } 
+    });
 
 /* END TOGGLE */
+
 
 function checkSend(checker){
     console.log(checker)
     if(!checker){
-        document.getElementById("form_registro").addEventListener("submit", function(e){
+        document.getElementById("#form_registro").addEventListener("submit", function(e){
             console.log(e);
             e.preventDefault();
         });
     }
     else{
-        document.getElementById("form_registro").addEventListener("submit", function(e){
+        document.getElementById("#form_registro").addEventListener("submit", function(e){
             e.stopPropagation();
             console.log(e);
         }, true);
