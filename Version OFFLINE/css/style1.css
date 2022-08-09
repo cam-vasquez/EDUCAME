@@ -29,7 +29,7 @@ section .contentBox{
 
 section .contentBox .formBox{
     max-width: 455px;
-    min-height: 593px;
+    min-height: 338px;
     padding: 40px;
     background: white;/*  */
     box-shadow: none;
@@ -37,6 +37,7 @@ section .contentBox .formBox{
 /*     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  */    margin: 5%;   
 }
+
 
 section .contentBox .formBox h2{
     font-size: var(--mobile-font-size);

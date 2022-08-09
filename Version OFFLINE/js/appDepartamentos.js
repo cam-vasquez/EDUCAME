@@ -15,7 +15,7 @@ let user_departamento_code = "MO";
         option += '<option value="'+departamento_code+'"'+selected+'>'+departamento_list[departamento_code]+'</option>';
     }
     document.getElementById('departamento').innerHTML = option;
-
+    
     // creating municipios name drop-down
     let municipio_code_id = document.getElementById("municipio-code");
     
@@ -60,9 +60,16 @@ function enviar(){
        console.log(municipio.value);*/
        //return true;
        
+       document.getElementById("alert").style.display = "none";
        document.getElementById("form_registro").submit();
     }
     else{
+        document.getElementById("alert").style.display = "inline-block";
         console.log("Datos necesarios"); 
     }
 } 
+document.getElementById("btnLimpiar").onclick = function(){
+    document.getElementById("alert").style.display = "none";
+    document.getElementById('departamento').selectedIndex = 0;
+    
+}

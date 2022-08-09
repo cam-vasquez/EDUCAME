@@ -58,6 +58,8 @@ section .contentBox .formBox{
     margin: 5%;   
 }
 
+
+
 section .contentBox .formBox h2{
     font-size: var(--mobile-font-size);
     color: #5047E6;
@@ -126,6 +128,14 @@ input:focus::placeholder {
     max-width: 256px;
     height: 80px;
  }
+
+section .contentBox .formBox #alert{
+    display: none; 
+    margin-bottom: 20px;
+    height: 30px;
+    line-height:30px;
+    padding:0px 15px;
+}
 
  #btnEnviar {
     color: white;
