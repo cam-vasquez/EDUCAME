@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    padding: 10px 20px 10px 12px;
+    outline: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128);
+
+}
+
+select:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #2db0759d;
+    background: rgb(167,167,167);
+    background: linear-gradient(313deg, rgba(167,167,167,1) 0%, rgba(208,208,208,1) 28%);
+/*     background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+ */
+    
+}
+
+section .contentBox .formBox #alert{
+    display: none; 
+    margin-bottom: 8px;
+    height: 30px;
+    line-height:30px;
+    padding:0px 15px;
+}
+
+section .contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+section .contentBox .formBox {
+    min-width: 750px;
+    min-height: 630px;
+    padding: 40px;
+    background: white;
+    /*box-shadow: none;*/
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; 
+    border-radius: 5px;
+    margin: 0px;  
+    
+}
+
+/* 750 x 672 */
+
+section .contentBox .formBox h2 {
+    font-size: var(--mobile-font-size);
+    color: #5047E6;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    justify-content: center;
+    text-align: center; 
+    width: 100%;
+}
+
+section .contentBox .formBox .inputBx{
+    margin-bottom: 20px;
+}
+
+section .contentBox .formBox label{
+    font-size: 11px;
+    font-size: var(--mobile-font-size);
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+section .contentBox .formBox input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: white;
+    border-radius: 5px;
+    color: rgb(26, 26, 26);
+    border: 1px solid rgb(128, 128, 128);
+}
+
+
+section .contentBox .formBox input:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+#logo{
+    min-width: 100px;
+    height: 50px;
+}
+ 
+
+#btnEnviar {
+    color: white;
+    background-color: #5047E6;
+    font-weight: 500;
+    font-size: 25px;
+    font-size: var(--mobile-font-size);
+    padding: 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid #5047E6;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    
+}
+
+#btnEnviar:hover{
+    background-color: #4f47e6cb;
+    color: #f5f5f5;
+    overflow: hidden;
+    border-color: transparent;
+
+}
+
+#btnLimpiar {
+    color: black;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    font-size: var(--mobile-font-size);
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid #120e0e;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+
+}
+
+#btnLimpiar:hover{
+    background-color: #4f47e6cb;
+    border-color: transparent;
+    color: #f5f5f5;
+    overflow: hidden;
+}
+
+
+@media(max-width: 800px){
+
+    #logo{
+        display: none;
+    } 
+
+    section .contentBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        overflow: hidden;
+        background: white;
+    }
+
+    section .contentBox .formBox{
+        width: 100%;
+        padding: 40px;
+        background: white;
+        box-shadow: none;
+        margin: 5%;        
+    }
+
+}
