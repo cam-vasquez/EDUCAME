@@ -33,9 +33,11 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: #21A66A;
+    background: #4f47e6bd;
+/* background: rgb(167,167,167);
+    background: linear-gradient(313deg, rgba(167,167,167,1) 0%, rgba(208,208,208,1) 28%);
     background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-
+ */
     
 }
 
@@ -58,10 +60,10 @@ section .contentBox{
 
 section .contentBox .formBox {
     min-width: 750px;
-    min-height: 672px;
+    min-height: 630px;
     padding: 40px;
     background: white;
-   /*   box-shadow: none;*/
+    /*box-shadow: none;*/
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; 
     border-radius: 5px;
     margin: 0px;  
@@ -119,8 +121,6 @@ section .contentBox .formBox input:hover{
 input:focus::placeholder {
     color: transparent;
 }
-
-
 
 #logo{
     min-width: 100px;
