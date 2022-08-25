@@ -8,6 +8,8 @@
 
 select {
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
     padding: 10px 20px 10px 12px;
     outline: none;
@@ -31,19 +33,22 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: #21A66A;
+    background: #4f47e6bd;
+/* background: rgb(167,167,167);
+    background: linear-gradient(313deg, rgba(167,167,167,1) 0%, rgba(208,208,208,1) 28%);
     background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-
+ */
     
 }
 
-section .contentBox .formBox .alert{
+section .contentBox .formBox #alert{
     display: none; 
     margin-bottom: 8px;
     height: 30px;
     line-height:30px;
     padding:0px 15px;
 }
+
 section .contentBox{
     display: flex;
     justify-content: center;
@@ -55,14 +60,17 @@ section .contentBox{
 
 section .contentBox .formBox {
     min-width: 750px;
-    min-height: 400px;
+    min-height: 630px;
     padding: 40px;
     background: white;
-    box-shadow: none;
-  /*   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; */
+    /*box-shadow: none;*/
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; 
     border-radius: 5px;
     margin: 0px;  
+    
 }
+
+/* 750 x 672 */
 
 section .contentBox .formBox h2 {
     font-size: var(--mobile-font-size);
@@ -74,7 +82,6 @@ section .contentBox .formBox h2 {
     letter-spacing: 1px;
     justify-content: center;
     text-align: center; 
-
     width: 100%;
 }
 
@@ -136,6 +143,7 @@ input:focus::placeholder {
     justify-content: center;
     border: 2px solid #5047E6;
     width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
     
 }
@@ -163,6 +171,8 @@ input:focus::placeholder {
     justify-items: center;
     justify-content: center;
     border: 2px solid #120e0e;
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
 
 }

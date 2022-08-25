@@ -7,15 +7,22 @@
     <title>Registros</title>
     
     <link rel="icon" href="TabLogo1.png">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="font.css">
-    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css"> 
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+<!--  -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+<!--     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">-->
 
     <!-- ****************************** -->
-<style>
+ <style>
 
 
 * {
@@ -45,6 +52,25 @@
     margin-right: 15px;
 }
 
+#fechaIpt{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    padding: 10px 20px 10px 12px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid rgb(149, 149, 149);
+    letter-spacing: 1px;
+    background: transparent;
+    border-radius: 5px;
+}
+
+#fechaIpt:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
 select {
     font-family: 'Roboto', sans-serif;
     width: -webkit-fill-available;
@@ -62,10 +88,7 @@ select:hover{
     overflow: hidden;
 }
 
-#year{
-    margin-left: 10px;
-    width: -webkit-fill-available; 
-}
+
 
 
 section {
@@ -169,7 +192,9 @@ input:focus::placeholder {
     justify-items: center;
     justify-content: center;
     border: 2px solid #5047E6;
+    width: 100%;
     width: -webkit-fill-available;
+    width: -moz-available;
 
     
 }
@@ -198,7 +223,9 @@ input:focus::placeholder {
     justify-content: center;
     border: 2px solid #120e0e;
     margin-right: 10px;
+    width: 100%;
     width: -webkit-fill-available;
+    width: -moz-available;
 
 }
 
@@ -231,9 +258,7 @@ input:focus::placeholder {
     }
 
 }
-
-
-</style>
+</style> 
    
 </head>
 <body>
@@ -253,7 +278,7 @@ input:focus::placeholder {
         <div class="container">
             <div class="row">
             <div class="col"> 
-            <input type="text" name="fecha" id="fechaIpt" class="date-picker">
+            <input type="text" name="fecha" id="fechaIpt" class="date-picker" required>
             </div>
         </div>
     </div>
@@ -314,11 +339,20 @@ input:focus::placeholder {
 
 <br>
 
-   <!--  <div class="alert alert-warning" role="alert">
-                A simple warning alert—check it out! tipo: Solo puede seleccionar una opcion o no zhe
-              </div> an alert can be add by using Bootsrap
-              https://getbootstrap.com/docs/5.0/components/alerts/
-         <br> -->
+<!-- <div class="inputBox">
+    <div class="container">
+    <div class="row">
+        <div class="col" style="padding-left: 0px; padding-right: 0px;     padding-right: 0px;
+        ">
+        <div class="alert alert-warning" role="alert" id="alert" >
+            <div>
+                <strong>Atención:</strong> campos vacíos, completelos
+            </div>
+        </div> 
+        </div>
+    </div>
+    </div>
+</div> -->
 
     <div class="container">
         <div class="row"> 
@@ -344,6 +378,7 @@ input:focus::placeholder {
 
 <!-- *************************** -->
 <script>
+
 let partner = document.getElementById("partner");
 let persona = document.getElementById("persona");
 let date = document.getElementById("fechaIpt");
@@ -355,11 +390,18 @@ $(document).ready(function () {
             persona.disabled = true;
 
         }
+        else {
+            persona.disabled = false;
+        }
     }
     persona.onchange = function(){
         if(this.value != "action"){
             partner.selectedIndex = 0;
             partner.disabled = true;
+        }
+        else{
+
+            partner.disabled = false;
         }
     }
     checkSend(enviar());
@@ -368,6 +410,8 @@ $(document).ready(function () {
 function limpiar(){    
     document.getElementById("persona").disabled = false;
     document.getElementById("partner").disabled = false;
+    document.getElementById("fechaIpt").disabled = false;
+
 }
 
 function checkSend(checker){
@@ -392,10 +436,30 @@ function enviar(){
         return false;
 }
 
+
+/* function enviar(){
+        //if(select.value != "" && fecha <= now){
+            if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
+                document.getElementById("form_bienes").submit();
+            }
+            else{
+                alerta.style.display = "inline-block"; 
+                alerta.style.width = "100%"; 
+                alerta.style.overflow = "hidden"; 
+                
+            }
+            partner.addEventListener("focus", ()=> alerta.style.display = "none");
+            persona.addEventListener("focus", ()=> alerta.style.display = "none");
+        }
+    function limpiar(){
+        alerta.style.display = "none";
+    }
+        
+
 partner.addEventListener("change", () => checkSend(enviar()));
 persona.addEventListener("change", () => checkSend(enviar()));
 date.addEventListener("focus", () => checkSend(enviar()));
-
+ */
 $(function(){
     $(".date-picker").datepicker({
         changeMonth: true,

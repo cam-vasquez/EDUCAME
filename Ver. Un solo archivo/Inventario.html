@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+    
+    <link rel="icon" href="TabLogo1.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+   
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    padding: 10px 20px 10px 12px;
+    outline: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128);
+
+}
+
+select:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #86d7b3;
+    background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
+    
+}
+
+section .contentBox .formBox #alert{
+    display: none; 
+    margin-bottom: 8px;
+    height: 30px;
+    line-height:30px;
+    padding:0px 15px;
+}
+
+section .contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+section .contentBox .formBox {
+    min-width: 750px;
+    min-height: 672px;
+    padding: 40px;
+    background: white;
+    box-shadow: none;
+/*     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; 
+ */    border-radius: 5px;
+    margin: 0px;  
+    
+}
+
+/* 750 x 672 */
+
+section .contentBox .formBox h2 {
+    font-size: var(--mobile-font-size);
+    color: #5047E6;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    justify-content: center;
+    text-align: center; 
+    width: 100%;
+}
+
+section .contentBox .formBox .inputBx{
+    margin-bottom: 20px;
+}
+
+section .contentBox .formBox label{
+    font-size: 11px;
+    font-size: var(--mobile-font-size);
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+section .contentBox .formBox input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: white;
+    border-radius: 5px;
+    color: rgb(26, 26, 26);
+    border: 1px solid rgb(128, 128, 128);
+}
+
+
+section .contentBox .formBox input:hover{
+    border: 1px solid #5047E6;
+    overflow: hidden;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+
+
+#logo{
+    min-width: 100px;
+    height: 50px;
+}
+ 
+
+#btnEnviar {
+    color: white;
+    background-color: #5047E6;
+    font-weight: 500;
+    font-size: 25px;
+    font-size: var(--mobile-font-size);
+    padding: 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid #5047E6;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    
+}
+
+#btnEnviar:hover{
+    background-color: #4f47e6cb;
+    color: #f5f5f5;
+    overflow: hidden;
+    border-color: transparent;
+
+}
+
+#btnLimpiar {
+    color: black;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    font-size: var(--mobile-font-size);
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid #120e0e;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+
+}
+
+#btnLimpiar:hover{
+    background-color: #4f47e6cb;
+    border-color: transparent;
+    color: #f5f5f5;
+    overflow: hidden;
+}
+
+
+@media(max-width: 800px){
+
+    #logo{
+        display: none;
+    } 
+
+    section .contentBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        overflow: hidden;
+        background: white;
+    }
+
+    section .contentBox .formBox{
+        width: 100%;
+        padding: 40px;
+        background: white;
+        box-shadow: none;
+        margin: 5%;        
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section>
+
+<div class="contentBox">
+    <div class="formBox">
+        <div class="col">        
+            <img src="image.png"  alt="Gobierno SV" id="logo"> 
+        </div>
+ <h2>Inventario de bienes</h2>
+  <br> 
+  <br>      
+        
+<form method="get" target="_self" id="form_bienes" action="index.ph">
+
+         
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col-4" style="padding-left: 0px; padding-right: 20px;">
+        <div class="col-md-24 left">
+            <label>Número de bien</label>
+        </div>    
+        <input type="text" name="id_bien" id = "id_bien" placeholder="4564-SFE4-0434" required autocomplete>        
+    </div>
+    <div class="col-8" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-md-24 left">
+            <label>Descripción</label>
+        </div>    
+        <input type="text" name="descripcion" id="descripcion"  placeholder="Descripción del bien" required autocmplete>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
+        <div class="col-md-24 left">
+            <label>Marca</label>
+        </div>    
+        <input type="text" name="marca" id="marca" placeholder="ORBITEC" required autocomplete>
+    </div>
+    <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
+        <div class="col-md-24 left">
+            <label>Modelo</label>
+        </div>    
+        <input type="text" name="modelo" id="modelo" placeholder="TU-1006" required autocomplete>
+    </div> 
+    <div class="col-4" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-md-24 left">
+            <label>Serie</label>
+        </div>    
+        <input type="text" name="serie" id="serie" placeholder="6111801568" required autocomplete>
+    </div> 
+    
+    </div>
+</div>
+</div>
+<br>
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
+        <div class="col-md-24 left">
+            <label>Fecha de adq.</label>
+        </div>    
+        <input type="date" name="fecha" id= "fecha" required>        
+    </div>
+    <div class="col-4" style="padding-left: 0px; padding-right: 15px;">
+        <div class="col-md-24 left">
+            <label>Precio</label>
+        </div>    
+        <input type="number" name="precio" id="precio" step='0.01'  placeholder='0.00' required />
+    </div>
+    <div class="col-4" style="padding-left: 0px; padding-right: 0px;">
+        <div class="col-md-24 left">
+            <label>Estado</label>
+        </div>   
+            <select name="estado" id="slcEstado">
+                <option value="" selected></option>
+                <option value="bueno">Bueno</option>
+                <option value="malo">Malo</option>
+            </select>
+        </div>
+    </div>  
+    </div>
+</div>
+</div>
+<br>
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+    <div class="col" style="padding-left: 0px; padding-right: 0px;     padding-right: 0px;
+    ">
+        <div class="col-md-24 left">
+            <label>Observaciones</label>
+        </div>    
+        <input type="text" name="observaciones" id="observaciones" placeholder="Observaciones del bien" required>        
+    </div>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+        <div class="col" style="padding-left: 0px; padding-right: 0px;     padding-right: 0px;
+        ">
+        <div class="alert alert-warning" role="alert" id="alert" >
+            <div>
+                <strong>Atención:</strong> campos vacíos, completelos
+            </div>
+        </div> 
+        </div>
+    </div>
+    </div>
+</div>
+
+    <div class="container">
+            <div class="row"> 
+                <div class="col" style="padding-left: 0px; padding-right: 15px;">
+                    <div class="inputBox">
+                        <button type="reset" id="btnLimpiar" onclick = "javascript:limpiar()" style="padding-left: 0px; padding-right: 0px;">Limpiar</button>
+                    </div>
+                </div>
+                
+                <div class="col" style="padding-right: 0px;">
+                <div class="inputBox">
+                  <button type="button" onclick="javascript:enviar();" id="btnEnviar" style="padding-right: 0px;" >Enviar</button>
+                </div>
+            </div>
+                        
+            </div>
+        </div>
+                
+</form>         
+</div>     
+</div>
+</section>
+
+<script> 
+    let descripcion = document.getElementById("descripcion");
+    let modelo = document.getElementById("modelo");
+    let numero = document.getElementById("id_bien");
+    let marca = document.getElementById("marca");
+    let precio = document.getElementById("precio");
+    let serie = document.getElementById("serie");
+    let observacion = document.getElementById("observaciones");
+    let fecha = document.getElementById("fecha");
+    let estado = document.getElementById("slcEstado");
+    let alerta = document.getElementById("alert");
+    
+    function enviar(){
+        //if(select.value != "" && fecha <= now){
+            if(numero.value != "" && descripcion.value != "" && marca.value != "" && modelo.value != "" && serie.value != "" && fecha.value != "" && estado.value != "" && observacion.value != "" && numero.value != null){
+                document.getElementById("form_bienes").submit();
+            }
+            else{
+                alerta.style.display = "inline-block"; 
+                alerta.style.width = "100%"; 
+                alerta.style.overflow = "hidden";     
+            }
+
+            descripcion.addEventListener("focus", ()=> alerta.style.display = "none");
+            modelo.addEventListener("focus", ()=> alerta.style.display = "none");
+            numero.addEventListener("focus", ()=> alerta.style.display = "none");
+            marca.addEventListener("focus", ()=> alerta.style.display = "none");
+            precio.addEventListener("focus", ()=> alerta.style.display = "none");
+            observacion.addEventListener("focus", ()=> alerta.style.display = "none");
+            fecha.addEventListener("focus", ()=> alerta.style.display = "none");
+            estado.addEventListener("focus", ()=> alerta.style.display = "none");
+            serie.addEventListener("focus", ()=> alerta.style.display = "none");
+        }
+        
+    function limpiar(){
+        alerta.style.display = "none";
+    }
+        
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+
+</body>

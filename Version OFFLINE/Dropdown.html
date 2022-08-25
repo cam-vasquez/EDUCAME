@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
     <div class="formBox">
     <img src="image.png"  alt="Gobierno SV" class="logo"><br>
     <h2>Seleccionar departamento</h2><br>
-
+<br>
 <form  method="get" target="_self" name="form_departamento" id="form_registro">
 
 <div class="inputBox">
@@ -53,20 +53,32 @@
     <div class="row">
     <div class="col">
         <div>
-            <span id="municipio-code"></span>
+            <span id="municipio-code" style="width:100%"></span>
         </div>  
     </div>    
     </div>
     </div>
 </div>
-
 <br>
+<div class="inputBox">
+    <div class="container">
+    <div class="row">
+        <div class="col" style="padding-left: 0px; padding-right: 0px;">
+        <div class="alert alert-warning" role="alert" id="alert" style="display: none;" >
+            <div>
+                <strong>Atención:</strong> campos vacíos, completelos
+            </div>
+        </div> 
+        </div>
+    </div>
+    </div>
+</div>
 
 <div class="container" id="containerBtns" style="padding-left: 0; padding-right: 0;">
 <div class="row"> 
     <div class="col">
         <div class="inputBox">
-            <button type="reset" value="Limpiar" id="btnLimpiar" >Limpiar</button>
+            <button type="button" value="Limpiar" id="btnLimpiar" >Limpiar</button>
         </div>
     </div>
     <div class="col">

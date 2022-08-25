@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Registros</title>
     
     <link rel="icon" href="TabLogo1.png">
-
+<!--    <link rel="stylesheet" href="css/styleReporte.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font.css"> 
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -15,13 +15,12 @@
 <!--  -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-<!--     
+    <script src="js/jquery-ui.min.js"></script>    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
 
-    <!-- ****************************** -->
+
  <style>
 
 
@@ -40,7 +39,6 @@
 .container{
     display: grid;
     align-content: space-evenly;
-
 }
 
 .container .row .col{
@@ -73,6 +71,8 @@
 
 select {
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
     padding: 10px 20px 10px 12px;
     outline: none;
@@ -89,8 +89,6 @@ select:hover{
 }
 
 
-
-
 section {
     position: relative;
     width: 100%;
@@ -105,21 +103,22 @@ section .contentBox{
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #f5f5f5; 
-    background: #e0e0e0;
-    background-image: linear-gradient(to bottom, #f6f6f6, #f0f0f0, #ebebeb, #e5e5e5, #e0e0e0); 
+    background: #4f47e6bd;  
+/*     background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+ */}
 
-}
 
 section .contentBox .formBox{
     min-width: 440px;
-    max-width: 600px;
-    min-height: 400px;
-    padding:40px;
+    min-height: 570px;
+    padding: 40px;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 5%;   
+    margin: 5%; 
+    border-radius: 5px;  
 }
+
+
 
 section .contentBox .formBox h2{
     font-size: var(--mobile-font-size);
@@ -134,7 +133,6 @@ section .contentBox .formBox h2{
     text-align: center;
     width: 100%;
 }
-
 
 section .contentBox .formBox .inputBx{
     margin-bottom: 20px;
@@ -176,6 +174,17 @@ input:focus::placeholder {
     max-width: 256px;
     height: 80px;
  }
+
+ section .contentBox .formBox #alert{
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    display: none; 
+    margin-bottom: 20px;
+    height: 30px;
+    line-height:30px;
+    padding: 0px 15px;
+}
 
  #btnEnviar {
     color: white;
@@ -253,48 +262,38 @@ input:focus::placeholder {
         width: 100%;
         padding:40px;
         background: white;
-       box-shadow: rgba(255, 255, 255, 0) 0px 3px 8px;
+        box-shadow: rgba(255, 255, 255, 0) 0px 3px 8px;
         margin: 5%;        
     }
 
 }
-/*Estilo para datepicker prev y next buttons*/
-.ui-datepicker-prev span{
-    background-image: none !important;
 
-}
-.ui-datepicker-next span {
-  background-image: none !important;
-}
-.ui-datepicker-prev:before,
-.ui-datepicker-next:before {
-   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  font-weight: normal;
-  align-items: center;
-  justify-content: center;
-}
+/* Estilos para datepicker prev y next botones*/
 
-.ui-datepicker-prev:before {
-  content: "\f100";
+.ui-datepicker-prev:before, .ui-datepicker-next:before {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	font-weight: normal;
 }
+#ui-datepicker-div{
+    width: auto;
+}
+/* Style para  datepicker */ 
 
-.ui-datepicker-next:before {
-  content: "\f101";
-}
-/*Estilo para datepicker*/
-.ui-datepicker-month,
-.ui-datepicker-year{
+.ui-datepicker-month, .ui-datepicker-year{
     font-size: 12px !important;
 }
-.ui-datepicker-current,
-.ui-datepicker-close{
+
+.ui-datepicker-current, .ui-datepicker{
     font-size: 15px !important;
 }
+
 </style> 
    
 </head>
@@ -308,6 +307,10 @@ input:focus::placeholder {
         <h2>Generar registro</h2>
         <br>
 <form method="get" target="_self" id="form_registro">
+
+
+<!-- Select que permita ingresar la fecha. Debe de hacerse con Jquery para permitir compatibilidad con navegadores que no acepten tecnologia Chromium -->
+
     <div class="inputBox">
         <div class="col-md-24 left">
             <label>Por fecha</label>
@@ -315,12 +318,11 @@ input:focus::placeholder {
         <div class="container">
             <div class="row">
             <div class="col"> 
-            <input type="text" name="fecha" id="fechaIpt" class="date-picker" required>
+            <input type="text" name="fecha" id="fechaIpt" class="date-picker" autocomplete="off">
             </div>
         </div>
     </div>
     <br>
-    <!-- dad -->
         <div class="inputBox">
             <div class="col-md-24 left">
                 <label>Por persona</label>
@@ -330,18 +332,18 @@ input:focus::placeholder {
                 <div class="col">
                     <select  aria-label="Persona" id="persona" name="Persona">
                         <option value='action'>Selecionar persona </option>
-                        <option value="per_1"> Miguel Alejandro Navarro</option>
-                        <option value="per_2"> Daniela Michelle Torres</option>
-                        <option value="per_3"> Martín Elías Acosta</option>
-                        <option value="per_4"> Valeria Alexandra Escobar</option>
-                        <option value="per_5"> Adriana Carolina Martinez</option>
-                        <option value="per_6"> Carlos Gustavo Sánchez</option>
-                        <option value="per_7"> Adyni Arleht Pocasangre</option>
-                        <option value="per_8"> Carlos Fernando Vásquez</option>
-                        <option value="per_9"> Iris Yanet Aguilar</option>
-                        <option value="per_10"> Carlos Eduardo Grande</option>
-                        <option value="per_11"> Rebeca Jimana Alcaine</option>
-                        <option value="per_12"> José Luis Menjívar</option>
+                        <option value="persona_1"> Miguel Alejandro Navarro</option>
+                        <option value="persona_2"> Daniela Michelle Torres</option>
+                        <option value="persona_3"> Martín Elías Acosta</option>
+                        <option value="persona_4"> Valeria Alexandra Escobar</option>
+                        <option value="persona_5"> Adriana Carolina Martinez</option>
+                        <option value="persona_6"> Carlos Gustavo Sánchez</option>
+                        <option value="persona_7"> Adyni Arleht Pocasangre</option>
+                        <option value="persona_8"> Carlos Fernando Vásquez</option>
+                        <option value="persona_9"> Iris Yanet Aguilar</option>
+                        <option value="persona_10"> Carlos Eduardo Grande</option>
+                        <option value="persona_11"> Rebeca Jimana Alcaine</option>
+                        <option value="persona_12"> José Luis Menjívar</option>
                     </select>   
                 </div>    
             </div>
@@ -367,7 +369,7 @@ input:focus::placeholder {
                     <option value="partner_7">FEPADE</option>
                     <option value="partner_8">Fundación CINDE</option>
                     <option value="partner_9">ISDEMU</option>
-                    <option value="partner_10">Lorem, ipsum.</option>
+                    <option value="partner_10">LOREM IPSUM</option>
                 </select>                         
             </div> 
         </div>
@@ -376,12 +378,13 @@ input:focus::placeholder {
 
 <br>
 
-<!-- <div class="inputBox">
+<!-- Alerta que notifique al usuario de espacios dejados en blanco -->
+
+<div class="inputBox">
     <div class="container">
     <div class="row">
-        <div class="col" style="padding-left: 0px; padding-right: 0px;     padding-right: 0px;
-        ">
-        <div class="alert alert-warning" role="alert" id="alert" >
+        <div class="col" style="padding-left: 0px; padding-right: 0px; ">
+        <div class="alert alert-warning" role="alert" id="alerta"  style="display: none;"> <!-- ver el id -->
             <div>
                 <strong>Atención:</strong> campos vacíos, completelos
             </div>
@@ -389,18 +392,20 @@ input:focus::placeholder {
         </div>
     </div>
     </div>
-</div> -->
+</div>  
+
+<!-- Creando botones que permitan: 1- limpiar los inputs y los devuelvan a su estado original, 2. Bton que permita enviar los dsatros ingresados por el usuario -->
 
     <div class="container">
         <div class="row"> 
             <div class="col">
                 <div class="inputBox">
-                    <button type="reset" id="btnLimpiar" onclick = "limpiar()">Limpiar</button> 
+                    <button type="reset" id="btnLimpiar" onclick = "javascript:limpiar()">Limpiar</button> 
                 </div>
             </div>
         <div class="col">
             <div class="inputBox">
-                <button type="send" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
+                <button type="button" onclick="javascript:enviar()" id="btnEnviar" title="btnSubmit" name="btnSubmit" >Aceptar</button>
             </div>
         </div>
                     
@@ -416,116 +421,78 @@ input:focus::placeholder {
 <!-- *************************** -->
 <script>
 
-let partner = document.getElementById("partner");
+let socio = document.getElementById("partner");
 let persona = document.getElementById("persona");
 let date = document.getElementById("fechaIpt");
-
-$(document).ready(function () {
-    partner.onchange = function(){
-        if(this.value != "action"){
-            persona.selectedIndex = 0;
-            persona.disabled = true;
-
-        }
-        else {
-            persona.disabled = false;
-        }
-    }
-    persona.onchange = function(){
-        if(this.value != "action"){
-            partner.selectedIndex = 0;
-            partner.disabled = true;
-        }
-        else{
-
-            partner.disabled = false;
-        }
-    }
-    checkSend(enviar());
-});
+let alerta = document.getElementById("alerta");
+socio.addEventListener("focus", ()=> alerta.style.display = "none");
+persona.addEventListener("focus", ()=> alerta.style.display = "none");
+date.addEventListener("focus", ()=> alerta.style.display = "none");
+socio.onchange = disabledSocioPersona;
+persona.onchange = disabledSocioPersona;
 
 function limpiar(){    
-    document.getElementById("persona").disabled = false;
-    document.getElementById("partner").disabled = false;
-    document.getElementById("fechaIpt").disabled = false;
-
+    persona.disabled = false;
+    socio.disabled = false;
+    alerta.style.display = "none";
 }
 
-function checkSend(checker){
-    //console.log(checker);
-    if(!checker){
-        $("#form_registro").submit(function(e){
-            e.preventDefault();
-        });
-    }
-    else{
-        $("#form_registro").unbind("submit").submit();
-
-
-    }
+function disabledSocioPersona(){
+    console.log(this.selectedIndex)
+    if(persona.selectedIndex > 0)
+        socio.disabled = true;
+    else if(persona.selectedIndex == 0)
+        socio.disabled = false;
+    if(socio.selectedIndex > 0)
+        persona.disabled = true;
+    else if(socio.selectedIndex == 0)
+        persona.disabled = false;
 }
 
 function enviar(){
-    if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
-        return true;
+    if(date.value != "" && (persona.selectedIndex > 0 || socio.selectedIndex > 0)){
+        document.getElementById("form_registro").submit();
     }
-    else
-        return false;
+    else{
+        alerta.style.display = "inline-block";
+        alerta.style.width = "100%";
+        alerta.style.overflow = "hidden"; 
+    }
+}
+function limpiar(){
+    alerta.style.display = "none";
 }
 
-
-/* function enviar(){
-        //if(select.value != "" && fecha <= now){
-            if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
-                document.getElementById("form_bienes").submit();
-            }
-            else{
-                alerta.style.display = "inline-block"; 
-                alerta.style.width = "100%"; 
-                alerta.style.overflow = "hidden"; 
-                
-            }
-            partner.addEventListener("focus", ()=> alerta.style.display = "none");
-            persona.addEventListener("focus", ()=> alerta.style.display = "none");
-        }
-    function limpiar(){
-        alerta.style.display = "none";
-    }
-        
-*/
-partner.addEventListener("change", () => checkSend(enviar()));
-persona.addEventListener("change", () => checkSend(enviar()));
-date.addEventListener("focus", () => checkSend(enviar()));
-
-//Funcion creadora de datepicker
 $(function(){
     $(".date-picker").datepicker({
         //permitiendo cambio de mes con selects
-        changeMonth: true,  
-        //asignando array para input español y select español
-        monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        monthNamesShort: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        //permitiendo cambio de año por select
+        changeMonth: true,
+        //asignando array para input en español Y select en español 
+        monthNames:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthNamesShort:['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        //permitiendo cambioo de año por select
         changeYear: true,
         //agregando botones
         showButtonPanel: true,
-        //agregando span a botones
+        // agregando span a botones
         prevText: 'Anterior',
         nextText: 'Siguiente',
-        //boton seleccion dia actual
+        //boton seleccion mes actual
         currentText: 'Hoy',
-        //boton para cerrar
+        //boton para cerrar y guardar
         closeText: 'Guardar',
         //formato esperado
         dateFormat: "MM yy",
-        //funcion pasa valores seleccionados al input
+//funciones para valores selccionados al input
         onClose: function(dateText, pickedDate){
             $(this).datepicker("setDate", new Date(pickedDate.selectedYear, pickedDate.selectedMonth, 1));
         }
     });
 });
+
+
+
+
 
 
 </script>
