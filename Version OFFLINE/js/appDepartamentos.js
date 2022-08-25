@@ -55,11 +55,6 @@ function enviar(){
     var departamento = document.getElementById("departamento");
     var municipio = document.getElementById("municipio");
     if(departamento.value != "" && municipio.value != ""){
-       //window.open('index.php', '_self');
-       /*console.log(departamento.value);
-       console.log(municipio.value);*/
-       //return true;
-       
        document.getElementById("alert").style.display = "none";
        document.getElementById("form_registro").submit();
     }
@@ -68,6 +63,7 @@ function enviar(){
         console.log("Datos necesarios"); 
     }
 } 
+
 document.getElementById("btnLimpiar").onclick = function(){
     document.getElementById("alert").style.display = "none";
     document.getElementById('departamento').selectedIndex = 0;

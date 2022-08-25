@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+    
+    <link rel="icon" href="TabLogo1.png">
+    <link rel="stylesheet" href="css/styleReporte.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+   
+</head>
+<body>
+
+<section>
+
+<div class="contentBox">
+    <div class="formBox">
+        <img src="image.png"  alt="Gobierno SV" class="logo"><br>
+        <h2>Generar registro</h2>
+        <br>
+<form method="get" target="_self" id="form_registro">
+    <div class="inputBox">
+        <div class="col-md-24 left">
+            <label>Por fecha</label>
+        </div>
+        <div class="container" style="padding-left: 0px; padding-right: 0px;">
+            <div class="row">
+                <div class="col-6">
+                    <div class="inputBox">
+                        <select  aria-label="Mes" id="mes" name="mes">
+                            <option value=''>Selecionar mes </option>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>   
+                    </div>
+                </div>
+            <div class="col-6">
+                <div class="inputBox">
+                    <select  aria-label="Year" id="year" name="annio">
+                        <option value=''>Selecionar mes </option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                    </select>   
+                </div>
+        </div>
+    </div>
+    <br>
+        <div class="inputBox">
+            <div class="col-md-24 left">
+                <label>Por persona</label>
+            </div>
+            <div class="container" style="padding-left: 0px; padding-right: 0px;">
+                <div class="row">
+                <div class="col">
+                    <select  aria-label="Persona" id="persona" name="Persona">
+                        <option value=''>Selecionar persona </option>
+                        <option value="per_1"> Miguel Alejandro Navarro</option>
+                        <option value="per_2"> Daniela Michelle Torres</option>
+                        <option value="per_3"> Martín Elías Acosta</option>
+                        <option value="per_4"> Valeria Alexandra Escobar</option>
+                        <option value="per_5"> Adriana Carolina Martinez</option>
+                        <option value="per_6"> Carlos Gustavo Sánchez</option>
+                        <option value="per_7"> Adyni Arleht Pocasangre</option>
+                        <option value="per_8"> Carlos Fernando Vásquez</option>
+                        <option value="per_9"> Iris Yanet Aguilar</option>
+                        <option value="per_10"> Carlos Eduardo Grande</option>
+                        <option value="per_11"> Rebeca Jimana Alcaine</option>
+                        <option value="per_12"> José Luis Menjívar</option>
+                    </select>   
+                </div>    
+            </div>
+            </div>
+        </div>
+        <br>
+
+    <div class="inputBox">
+        <div class="col-md-24 left">
+                <label>Por socio</label>
+        </div>
+        <div class="container" style="padding-left: 0px; padding-right: 0px;">
+            <div class="row">
+            <div class="col">
+                <select aria-describedby="PartnerError"  aria-label="Partner" id="partner" name="Partner">
+                    <option value=''>Seleccionar socio </option>
+                    <option value="partner_1">Microsoft El Salvador</option>
+                    <option value="partner_2">MINSAL</option>
+                    <option value="partner_3">USAID</option>
+                    <option value="partner_4">Fundación Umbrella</option>
+                    <option value="partner_5">EDUCO</option>
+                    <option value="partner_6">FEDISAL</option>
+                    <option value="partner_7">FEPADE</option>
+                    <option value="partner_8">Fundación CINDE</option>
+                    <option value="partner_9">ISDEMU</option>
+                    <option value="partner_10">CEMUJER</option>
+                </select>                         
+            </div> 
+        </div>
+        </div>
+    </div>
+
+<br>
+
+    <div class="inputBox">
+            <div class="container">
+            <div class="row">
+                <div class="col" style="padding-left: 0px; padding-right: 0px;">
+                <div class="alert alert-warning" role="alert" id="alert" >
+                    <div>
+                        <strong>Atención:</strong> campos vacíos, completelos
+                    </div>
+                </div> 
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row"> 
+            <div class="col-6" style="padding-left: 0px; padding-right: 10px;">
+                <div class="inputBox">
+                    <button type="reset" id="btnLimpiar" onclick="limpiar()">Limpiar</button> 
+                </div>
+            </div>
+        <div class="col-6" style="padding-left: 0px; padding-right: 0px;">
+            <div class="inputBox">
+                <button type="send" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
+            </div>
+        </div>
+                    
+        </div>
+    </div>
+      
+                    
+</form>         
+</div>     
+</div>
+</section>
+
+<!-- <script> 
+    let partner = document.getElementById("partner");
+    let persona = document.getElementById("persona");
+    let mes = document.getElementById("mes");
+    let year = document.getElementById("year");
+    let alerta = document.getElementById("alert");
+    
+    function enviar(){
+        //if(select.value != "" && fecha <= now){
+            if((//){
+                document.getElementById("form_bienes").submit();
+            }
+            else{
+                alerta.style.display = "inline-block"; 
+                alerta.style.width = "100%"; 
+                alerta.style.overflow = "hidden"; 
+                
+            }
+            partner.addEventListener("focus", ()=> alerta.style.display = "none");
+            persona.addEventListener("focus", ()=> alerta.style.display = "none");
+            mes.addEventListener("focus", ()=> alerta.style.display = "none");
+            year.addEventListener("focus", ()=> alerta.style.display = "none");
+        }
+    function limpiar(){
+        alerta.style.display = "none";
+    }
+        
+</script> -->
+
+/*  <script src="js/appReporte.js"></script>
+ */ <script src="js/bootstrap.min.js"></script>
+
+</body>

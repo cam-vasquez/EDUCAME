@@ -1,4 +1,4 @@
-let partner = document.getElementById("partner");
+/* let partner = document.getElementById("partner");
 let persona = document.getElementById("persona");
 let date = document.getElementById("fechaIpt");
 
@@ -50,4 +50,6 @@ partner.addEventListener("change", () => checkSend(enviar()));
 persona.addEventListener("change", () => checkSend(enviar()));
 date.addEventListener("change", () => checkSend(enviar()));
 
+
+ */
 
