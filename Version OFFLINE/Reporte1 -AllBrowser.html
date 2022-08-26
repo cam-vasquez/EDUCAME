@@ -32,7 +32,7 @@
                 <div class="col-6">
                     <div class="inputBox">
                         <select  aria-label="Mes" id="mes" name="mes">
-                            <option value='action'>Selecionar mes </option>
+                            <option value=''>Selecionar mes </option>
                             <option value="Enero">Enero</option>
                             <option value="Febrero">Febrero</option>
                             <option value="Marzo">Marzo</option>
@@ -51,7 +51,7 @@
             <div class="col-6">
                 <div class="inputBox">
                     <select  aria-label="Year" id="year" name="annio">
-                        <option value='action'>Selecionar mes </option>
+                        <option value=''>Selecionar mes </option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -77,7 +77,7 @@
                 <div class="row">
                 <div class="col">
                     <select  aria-label="Persona" id="persona" name="Persona">
-                        <option value='action'>Selecionar persona </option>
+                        <option value=''>Selecionar persona </option>
                         <option value="per_1"> Miguel Alejandro Navarro</option>
                         <option value="per_2"> Daniela Michelle Torres</option>
                         <option value="per_3"> Martín Elías Acosta</option>
@@ -105,7 +105,7 @@
             <div class="row">
             <div class="col">
                 <select aria-describedby="PartnerError"  aria-label="Partner" id="partner" name="Partner">
-                    <option value='action'>Seleccionar socio </option>
+                    <option value=''>Seleccionar socio </option>
                     <option value="partner_1">Microsoft El Salvador</option>
                     <option value="partner_2">MINSAL</option>
                     <option value="partner_3">USAID</option>
@@ -115,7 +115,7 @@
                     <option value="partner_7">FEPADE</option>
                     <option value="partner_8">Fundación CINDE</option>
                     <option value="partner_9">ISDEMU</option>
-                    <option value="partner_10">Lorem, ipsum.</option>
+                    <option value="partner_10">CEMUJER</option>
                 </select>                         
             </div> 
         </div>
@@ -124,12 +124,19 @@
 
 <br>
 
-   <!--  <div class="alert alert-warning" role="alert">
-                A simple warning alert—check it out! tipo: Solo puede seleccionar una opcion o no zhe
-              </div> an alert can be add by using Bootsrap
-              https://getbootstrap.com/docs/5.0/components/alerts/
-         <br> -->
-
+    <div class="inputBox">
+            <div class="container">
+            <div class="row">
+                <div class="col" style="padding-left: 0px; padding-right: 0px;">
+                <div class="alert alert-warning" role="alert" id="alert" >
+                    <div>
+                        <strong>Atención:</strong> campos vacíos, completelos
+                    </div>
+                </div> 
+                </div>
+            </div>
+            </div>
+        </div>
     <div class="container">
         <div class="row"> 
             <div class="col-6" style="padding-left: 0px; padding-right: 10px;">
@@ -139,7 +146,7 @@
             </div>
         <div class="col-6" style="padding-left: 0px; padding-right: 0px;">
             <div class="inputBox">
-                <button type="send" onclick="enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
+                <button type="button" id="btnEnviar" title="btnSubmit" name="btnSubmit" >Aceptar</button>
             </div>
         </div>
                     
@@ -151,7 +158,6 @@
 </div>     
 </div>
 </section>
-
 
 <script src="js/appReporte.js"></script>
 <script src="js/bootstrap.min.js"></script>
