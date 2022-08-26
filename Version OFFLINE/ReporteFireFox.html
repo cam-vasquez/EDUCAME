@@ -15,13 +15,12 @@
 <!--  -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-<!--     
+    <script src="js/jquery-ui.min.js"></script>    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
 
-    <!-- ****************************** -->
+
  <style>
 
 
@@ -271,15 +270,6 @@ input:focus::placeholder {
 
 /* Estilos para datepicker prev y next botones*/
 
-
-.ui-datepicker-prev span {
-	background-image: none !important;
- }
-
-.ui-datepicker-next span {
-	background-image: none !important;	
-}
-
 .ui-datepicker-prev:before, .ui-datepicker-next:before {
 	position: absolute;
 	top:0;
@@ -291,17 +281,10 @@ input:focus::placeholder {
 	justify-items: center;
 	font-weight: normal;
 }
-
-.ui-datepicker-prev:before {
-	content: "/f100";
+#ui-datepicker-div{
+    width: auto;
 }
-
-.ui-datepicker-next:before {
-	content: "/f100";
-}
-
 /* Style para  datepicker */ 
-
 
 .ui-datepicker-month, .ui-datepicker-year{
     font-size: 12px !important;
@@ -335,7 +318,7 @@ input:focus::placeholder {
         <div class="container">
             <div class="row">
             <div class="col"> 
-            <input type="text" name="fecha" id="fechaIpt" class="date-picker">
+            <input type="text" name="fecha" id="fechaIpt" class="date-picker" autocomplete="off">
             </div>
         </div>
     </div>
@@ -401,7 +384,7 @@ input:focus::placeholder {
     <div class="container">
     <div class="row">
         <div class="col" style="padding-left: 0px; padding-right: 0px; ">
-        <div class="alert alert-warning" role="alert" id="alerta"> <!-- ver el id -->
+        <div class="alert alert-warning" role="alert" id="alerta"  style="display: none;"> <!-- ver el id -->
             <div>
                 <strong>Atención:</strong> campos vacíos, completelos
             </div>
@@ -422,7 +405,7 @@ input:focus::placeholder {
             </div>
         <div class="col">
             <div class="inputBox">
-                <button type="send" onclick="javascript:enviar()" id="btnEnviar" title="Submit" name="submit" >Aceptar</button>
+                <button type="button" onclick="javascript:enviar()" id="btnEnviar" title="btnSubmit" name="btnSubmit" >Aceptar</button>
             </div>
         </div>
                     
@@ -438,102 +421,47 @@ input:focus::placeholder {
 <!-- *************************** -->
 <script>
 
-let partner = document.getElementById("partner");
+let socio = document.getElementById("partner");
 let persona = document.getElementById("persona");
 let date = document.getElementById("fechaIpt");
-
-
-$(document).ready(function () {
-    partner.onchange = function(){
-        if(this.value != "action"){
-            persona.selectedIndex = 0;
-            persona.disabled = true;
-
-        }
-        else {
-            persona.disabled = false;
-        }
-    }
-
-    persona.onchange = function(){
-        if(this.value != "action"){
-            partner.selectedIndex = 0;
-            partner.disabled = true;
-        }
-        else{
-            partner.disabled = false;
-        }
-    }
-    checkSend(enviar());
-});
+let alerta = document.getElementById("alerta");
+socio.addEventListener("focus", ()=> alerta.style.display = "none");
+persona.addEventListener("focus", ()=> alerta.style.display = "none");
+date.addEventListener("focus", ()=> alerta.style.display = "none");
+socio.onchange = disabledSocioPersona;
+persona.onchange = disabledSocioPersona;
 
 function limpiar(){    
-    document.getElementById("persona").disabled = false;
-    document.getElementById("partner").disabled = false;
-    document.getElementById("fechaIpt").disabled = false;
-    document.getElementById("alert").style.display = "none";
+    persona.disabled = false;
+    socio.disabled = false;
+    alerta.style.display = "none";
 }
 
-function checkSend(checker){
-    //console.log(checker);
-    if(!checker){
-        //cambiar eso del #, antes lo tenia en el form_registros
-        $("form_registro").submit(function(e){
-            e.preventDefault();
-        });
-    }
-    else{
-        $("form_registro").unbind("submit").submit();
-
-
-    }
+function disabledSocioPersona(){
+    console.log(this.selectedIndex)
+    if(persona.selectedIndex > 0)
+        socio.disabled = true;
+    else if(persona.selectedIndex == 0)
+        socio.disabled = false;
+    if(socio.selectedIndex > 0)
+        persona.disabled = true;
+    else if(socio.selectedIndex == 0)
+        persona.disabled = false;
 }
 
-/* function enviar(){
-    if((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0)){
-        document.getElementById("alert").style.display = "none";
-        return true;
-    }
-    else{
-        document.getElementById("alert").style.display = "inline-block";
-        return false;
-        
-    }
-}
- */
-/* function checker(){
-    if(enviar()){
-        document.getElementById("alert").style.display = "none";
-        return true;
-    }
-    else{
-        document.getElementById("alert").style.display = "none";
-        return false;
-    }
-} */
-
-function enviar(){{
-    if(((date.value != "" && partner.selectedIndex > 0) || (date.value != "" && persona.selectedIndex > 0))){
+function enviar(){
+    if(date.value != "" && (persona.selectedIndex > 0 || socio.selectedIndex > 0)){
         document.getElementById("form_registro").submit();
     }
     else{
         alerta.style.display = "inline-block";
-        alerta.style.width = "100%";}
-        alerta.style.overflow = "hidden"; }
+        alerta.style.width = "100%";
+        alerta.style.overflow = "hidden"; 
     }
-    partner.addEventListener("focus", ()=> alerta.style.display = "none");
-    persona.addEventListener("focus", ()=> alerta.style.display = "none");
-    function limpiar{
-        alerta.style.display = "none";
-    }
-
-
-
-
-
-partner.addEventListener("change", () => checkSend(enviar()));
-persona.addEventListener("change", () => checkSend(enviar()));
-date.addEventListener("focus", () => checkSend(enviar()));
+}
+function limpiar(){
+    alerta.style.display = "none";
+}
 
 $(function(){
     $(".date-picker").datepicker({
